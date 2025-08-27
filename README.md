@@ -1,10 +1,10 @@
 # AIssist
 
 ## 📌 Descrição do Desafio
-Descreva aqui o problema/dor do parceiro e o objetivo do projeto.
+Desenvolvimento de um Sistema Integrado para Gestão de Chamados e Suporte Técnico com Apoio de IA
 
 ## 📋 Backlog de Produto
-- [ ] [Funcionalidade 1](https://github.com/DANFAGUNDES0/PimWeb/blob/main/docs/REQUISITOS.txt)
+- [ ] [Funcionalidade 1](https://github.com/DANFAGUNDES0/PimWeb/blob/main/Requisitos%3Etxt)
 - [ ] Funcionalidade 2
 - [ ] Funcionalidade 3
 
