@@ -1,49 +1,53 @@
-## AIssist
+# AIssist
 
-- ## Integrante -  [Daniel Fagundes da Mota Filho - G97BJA0](https://github.com/DANFAGUNDES0)
-  
-- ## [Requisitos](https://github.com/ThorMorciani/PimWeb/blob/main/Analise%20POO/Requisitos.txt)
+## 📌 Descrição do Desafio
+Descreva aqui o problema/dor do parceiro e o objetivo do projeto.
 
-- ## [Backlog](https://github.com/ThorMorciani/PimWeb/blob/main/Analise%20POO/User%20Stories.txt)
+## 📋 Backlog de Produto
+- [ ] Funcionalidade 1
+- [ ] Funcionalidade 2
+- [ ] Funcionalidade 3
 
+## 🗓️ Cronograma do Projeto
+Exemplo de cronograma visual (pode ser feito no Miro, Trello, Jira ou até imagem com link aqui).
 
-- ## > Backlog <
-  
-- ## Sprint 1: 20/08/2025 - 26/08/2025
-- ## Tarefas:
- 
-   Entrega do Casos de Uso
-  
-  <img width="873" height="564" alt="image" src="https://github.com/user-attachments/assets/7142f184-a4de-41d0-a219-35b5734a5e6d" />
+## 📊 Tabela de Sprints
+| Sprint | Período        | Documentação | Vídeo do Incremento |
+|--------|----------------|--------------|----------------------|
+| 1      | 01/03 - 15/03  | [Doc Sprint 1](docs/Sprint1.md) | [Vídeo](https://youtube.com/xxxx) |
+| 2      | 16/03 - 30/03  | [Doc Sprint 2](docs/Sprint2.md) | [Vídeo](https://youtube.com/xxxx) |
 
+## 🛠 Tecnologias Utilizadas
+- Angular
+- Node.js
+- MongoDB
+- Bootstrap
 
-  
-- ## Sprint 2: 20/08/2025 - 26/08/2025
-- ## Tarefas:
+## 📂 Estrutura do Projeto
+```bash
+📂 src
+ ┣ 📂 components
+ ┣ 📂 services
+ ┗ app.module.ts
+```
 
+## ▶️ Como Executar o Projeto
+```bash
+# Instalar dependências
+npm install
 
-  
-- ## Sprint 3: 20/08/2025 - 26/08/2025
-- ## Tarefas:
+# Rodar em ambiente de desenvolvimento
+npm start
 
+# Rodar testes
+npm test
+```
 
-  
-- ## Sprint 4: 20/08/2025 - 26/08/2025
-- ## Tarefas:
+## 📑 Documentação
+Acesse a pasta [docs](./docs).
 
- 
-  
-- ## Sprint 5: 20/08/2025 - 26/08/2025
-- ## Tarefas:
-  
-
-  
-- ## Sprint 6: 20/08/2025 - 26/08/2025
-- ## Tarefas:
-
-  
-  
-- ## Sprint 7: 20/08/2025 - 26/08/2025
-- ## Tarefas:
+## 👥 Equipe
+- Nome 1 – Dev Backend – [GitHub](https://github.com/xxx) | [LinkedIn](https://linkedin.com/in/xxx)
+- Nome 2 – Dev Frontend – [GitHub](https://github.com/xxx) | [LinkedIn](https://linkedin.com/in/xxx)
 
 
