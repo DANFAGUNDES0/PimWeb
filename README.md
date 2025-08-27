@@ -1,6 +1,6 @@
 # AIssist
 
-## 📌 Descrição do Desafio
+## 📌 Descrição do Projeto
 Desenvolvimento de um Sistema Integrado para Gestão de Chamados e Suporte Técnico com Apoio de IA
 
 ## 📋 Backlog de Produto
