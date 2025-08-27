@@ -4,7 +4,7 @@
 Descreva aqui o problema/dor do parceiro e o objetivo do projeto.
 
 ## 📋 Backlog de Produto
-- [ ] Funcionalidade 1
+- [ ] [Funcionalidade 1](https://github.com/DANFAGUNDES0/PimWeb/blob/main/docs/REQUISITOS.txt)
 - [ ] Funcionalidade 2
 - [ ] Funcionalidade 3
 
