@@ -69,7 +69,7 @@ AIssist é um aplicativo de gestão de chamados que utiliza Inteligência Artifi
 ## 📊 Tabela de Sprints
 | Sprint | Período        | Documentação |
 |--------|----------------|--------------|
-| 1      | 18/08 - 24/08  | [Doc Sprint 1](docs/Sprint1.md) 
+| 1      | 18/08 - 24/08  | [Doc Sprint 1](a2740257c20900c16a4060abc19eb0ba92fcc126) 
 | 2      | 25/08 - 31/08  | [Doc Sprint 2](docs/Sprint2.md) 
 | 3      | 01/09 - 07/09  | [Doc Sprint 2](docs/Sprint2.md) 
 | 4      | 08/09 - 14/09  | [Doc Sprint 2](docs/Sprint2.md) 
