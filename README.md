@@ -1,4 +1,4 @@
-# AIssist
+## AIssist
 
 ## 📌 Descrição do Projeto
 Desenvolvimento de um Sistema Integrado para Gestão de Chamados e Suporte Técnico com Apoio de IA
@@ -11,8 +11,60 @@ AIssist é um aplicativo de gestão de chamados que utiliza Inteligência Artifi
 - [ ] Funcionalidade 2
 - [ ] Funcionalidade 3
 
-## 🗓️ Cronograma do Projeto
-Exemplo de cronograma visual (pode ser feito no Miro, Trello, Jira ou até imagem com link aqui).
+## 📅 Cronograma do Projeto
+
+## Semana 1  
+- Tela Home  
+
+## Semana 2
+- Criação da tela de causas raiz
+- Tela de logs
+- Criação de ticket
+
+## Semana 3
+
+
+
+## Semana 4
+
+
+
+## Semana 5
+
+ 
+
+## Semana 6
+
+
+
+## Semana 7
+
+  
+
+## Semana 8
+
+  
+  
+    
+## Semana 9
+
+
+
+## Semana 10
+
+
+
+
+## Semana 11
+
+
+  
+
+## Semana 12
+- Testes finais  
+- Ajustes  
+- Entrega do projeto  
+
 
 ## 📊 Tabela de Sprints
 | Sprint | Período        | Documentação |
@@ -33,8 +85,8 @@ Exemplo de cronograma visual (pode ser feito no Miro, Trello, Jira ou até image
 ## 🛠 Tecnologias Utilizadas
 - Angular
 - Node.js
-- MongoDB
-- Bootstrap
+- SCSS
+- HTML
 
 ## 📂 Estrutura do Projeto
 ```bash
@@ -60,7 +112,9 @@ npm test
 Acesse a pasta [docs](./docs).
 
 ## 👥 Equipe
-- Nome 1 – Dev Backend – [GitHub](https://github.com/xxx) | [LinkedIn](https://linkedin.com/in/xxx)
-- Nome 2 – Dev Frontend – [GitHub](https://github.com/xxx) | [LinkedIn](https://linkedin.com/in/xxx)
+- Daniel fagundes – Dev Frontend  – [GitHub](https://github.com/DANFAGUNDES0) | [LinkedIn](https://www.linkedin.com/in/daniel-fagundes-916ba4246?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
+
+- Murilo Camara – Dev Frontend – [GitHub](https://github.com/MuriloCSilva) | [LinkedIn](https://www.linkedin.com/in/murilocamara?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
+
 
 
