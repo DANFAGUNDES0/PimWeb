@@ -1,49 +1,104 @@
-## Integrantes
-- [Thor de Oliveira Morciani - G96DFD3](https://github.com/ThorMorciani)
-- [Caio Henrique Barbosa Santos - G976690](https://github.com/CaioHennrique)
-- [Daniel Fagundes da Mota Filho - G97BJA0](https://github.com/DANFAGUNDES0)
-- [Murilo Câmara da Silva – G9843G0](https://github.com/MuriloCSilva)
-- [Joel Rodrigues Pereira - R0507H0](https://github.com/JoelRP00)
-- [João Pedro Costa Vieira - G956HJ7](https://github.com/JoaoPcvv)
+# API 4º Semestre ADS
 
-## [User Stories](https://github.com/ThorMorciani/PimWeb/blob/main/Analise%20POO/User%20Stories.txt)
+# AIssist
 
-## [Requisitos](https://github.com/ThorMorciani/PimWeb/blob/main/Analise%20POO/Requisitos.txt)
+<p align="center">
+      <img src="docs/Img/logo.png" alt="logo da AIssist" width="200">
+      <h2 align="center"> AIssist</h2>
+</p>
 
-## --- Backlog ---
+<p align="center">
+  | <a href ="#desafio"> Desafio</a>  |
+  <a href ="#solucao"> Solução</a>  |   
+  <a href ="#backlog"> Backlog do Produto</a>  |
+  <a href ="#dor">DoR</a>  |
+  <a href ="#dod">DoD</a>  |
+  <a href ="#sprint"> Cronograma de Sprints</a>  |
+  <a href ="#tecnologias">Tecnologias</a> |
+  <a href ="#manual">Manual de Instalação</a>  | 
+  <a href ="#equipe"> Equipe</a> |
+</p>
 
-## Sprint 1: 31/03/2025 - 07/04/2025
-## Tarefas:
-1. Levantar os requisitos funcionais e não funcionais do projeto.
-2. Criar os repositórios no Git.
-3. Iníciar a documentação do sistema.
+## 🏅 Desafio <a id="desafio"></a>
 
-## Sprint 2: 07/04/2025 - 14/04/2025
-## Tarefas:
-1. Criar o diagrama de banco de dados.
-2. Criar o diagrama de casos de uso.
+O desafia consiste em desenvolver um sistema de gerenciamento de chamados com o auxílio de uma Inteligência Artificial para propor possíveis soluções e ajudar na categorização de chamados, deixando o processo mais eficiente e menos propenso à falhas.
 
-## Sprint 3: 14/04/2025 - 21/04/2025
-## Tarefas:
-1. Criar o diagrama de classes.
-2. Corrigir casos de uso.
-3. Validar documentação com os professores. 
+## 🏅 Solução <a id="solucao"></a>
 
-## Sprint 4: 21/04/2025 - 28/04/2025
-## Tarefas:
-1. Criar o diagrama de casos de uso descritivos.
-2. Criar diagrama de sequência.
-3. Validar documentação com os professores.
+O AIssist permitirá que o usuário tenha total controle sobre o chamado aberto podendo verificar se a solução proposta pela Inteligência Artificial solucionou o problema ou não. Caso não, o chamado será enviado para o time de atendimento onde receberá o atendimento de acordo com a criticidade e podendo ser consultado a qualquer momento para a validação da requisição.
 
-## Sprint 5: 28/04/2025 - 05/05/2025 /n
-## Tarefas:
-1. Criar a planilha de testes unitários.
-2. Validar protótipo com professor responsável.
-3. Validar documentação com os professores.
+---
 
-## Sprint 6: 05/05/2025 - 12/05/2025
-## Tarefas:
-1. Validar protótipo com professor responsável.
-2. Validar documentação com os professores.
+## 📋 Backlog do Projeto <a id="backlog"></a>
+[Backlog](./Analise%20POO/User%20Stories.txt)
 
-## --- FIM Backlog ---
+---
+
+## 🏃‍ DoR - Definition of Ready <a id="dor"></a>
+
+* User Stories com **Critérios de Aceitação**
+* Subtarefas divididas **a partir das US**
+* Design no **Figma**
+* Modelagem do **Banco de Dados**
+* Diagrama de **Rotas**
+* Banco de Dados **Vetorizado** do Cliente
+
+## 🏆 DoD - Definition of Done <a id="dod"></a>
+
+* Manual de Usuário
+* Manual da Aplicação
+* Código completo
+
+---
+
+## 📅 Cronograma de Sprints <a id="sprint"></a>
+
+| Sprint          |    Período    | 
+| --------------- | :-----------: | 
+| 🔖 **SPRINT 1** | 18/08 - 24/08 | 
+| 🔖 **SPRINT 2** | 25/08 - 31/08 | 
+| 🔖 **SPRINT 3** | 01/09 - 07/09 |
+| 🔖 **SPRINT 4** | 08/09 - 14/09 |
+| 🔖 **SPRINT 5** | 15/09 - 21/09 |
+| 🔖 **SPRINT 6** | 22/09 - 28/09 |
+| 🔖 **SPRINT 7** | 29/09 - 05/10 |
+| 🔖 **SPRINT 8** | 06/10 - 12/10 |
+| 🔖 **SPRINT 9** | 13/10 - 19/10 |
+| 🔖 **SPRINT 10** | 20/10 - 26/10 |
+| 🔖 **SPRINT 11** | 27/10 - 02/11 |
+| 🔖 **SPRINT 12** | 03/11 - 09/11 |
+
+## 🎓 Equipe <a id="equipe"></a>
+
+<div align="center">
+  <table>
+    <tr>
+      <th>Membro</th>
+      <th>Função</th>
+    </tr>
+    <tr>
+      <td>Thor Morciani</td>
+      <td>Product Owner</td>
+    </tr>
+    <tr>
+      <td>Joel Rodrigues</td>
+      <td>Scrum Master</td>
+    </tr>
+    <tr>
+      <td>Murilo Camara</td>
+      <td>Desenvolvedor</td>
+    </tr>
+    <tr>
+      <td>Daniel Fagundes</td>
+      <td>Desenvolvedor</td>
+    </tr>
+    <tr>
+      <td>Caio Henrique</td>
+      <td>Desenvolvedor</td>
+    </tr>
+    <tr>
+      <td>João Pedro</td>
+      <td>Desenvolvedor</td> 
+    </tr> 
+  </table>
+</div>
