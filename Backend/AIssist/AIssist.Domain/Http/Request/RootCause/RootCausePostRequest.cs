@@ -4,7 +4,7 @@
 	{
         public string? RootCause { get; set; }
         public long CriticalityId { get; set; }
-        public string? UpdatedBy { get; set; }
+        public string? CreatedBy { get; set; }
     }
 }
 

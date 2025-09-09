@@ -3,6 +3,7 @@ using Supabase.Postgrest.Models;
 
 namespace AIssist.Domain.Entities
 {
+    [Table("logs")]
     public class Logs : BaseModel
     {
         [PrimaryKey("id", false)]

@@ -15,7 +15,9 @@ namespace AIssist.Domain.Services
 
         public async Task Add(RootCauses entity)
         {
-            await _supabaseclient.From<RootCauses>().Insert(entity);
+            await _supabaseclient
+                .From<RootCauses>()
+                .Insert(entity);
         }
 
         public async Task Inactivate(long entityId)

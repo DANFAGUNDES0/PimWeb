@@ -4,14 +4,14 @@ using System.Text;
 using AIssist.Application.Api.Services.Interfaces;
 using AIssist.Domain.Entities;
 using AIssist.Domain.Http.Request.User;
-using AIssist.Domain.Http.Response;
+using AIssist.Domain.Http.Response.Login;
 using AIssist.Domain.Services.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 
 namespace AIssist.Application.Api.Services
 {
-	public class AuthService : IAuthService
+    public class AuthService : IAuthService
 	{
         private readonly IUserService _userService;
         private readonly IConfiguration _configuration;

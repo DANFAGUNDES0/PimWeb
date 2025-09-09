@@ -32,6 +32,7 @@ namespace AIssist.Infrastructure.Ioc
                 mc.AddProfile(new MappingUser());
                 mc.AddProfile(new MappingRootCause());
                 mc.AddProfile(new MappingFunctionality());
+                mc.AddProfile(new MappingLog());
             }, loggerFactory);
 
             var mapper = mapperConfig.CreateMapper();
@@ -45,6 +46,7 @@ namespace AIssist.Infrastructure.Ioc
             services.AddScoped<IRootCauseAppService, RootCauseAppService>();
             services.AddScoped<IFunctionalityAppService, FunctionalityAppService>();
             services.AddScoped<IStatusAppService, StatusAppService>();
+            services.AddScoped<ILogAppService, LogAppService>();
         }
 
         private static void AddDomainServices(IServiceCollection services)
@@ -54,6 +56,7 @@ namespace AIssist.Infrastructure.Ioc
             services.AddScoped<IRootCauseService, RootCauseService>();
             services.AddScoped<IFunctionalityService, FunctionalityService>();
             services.AddScoped<IStatusService, StatusService>();
+            services.AddScoped<ILogService, LogService>();
         }
     }
 }

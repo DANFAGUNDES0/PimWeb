@@ -1,6 +1,6 @@
 ﻿using AIssist.Application.Api.Services.Interfaces;
 using AIssist.Domain.Http.Request.User;
-using AIssist.Domain.Http.Response;
+using AIssist.Domain.Http.Response.Login;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AIssist.Application.Api.Controllers

@@ -26,9 +26,19 @@ namespace AIssist.Application.Api.Controllers
         [HttpPost]
         public async Task<IActionResult> Add(RootCausePostRequest rootCauseRequest)
         {
-            await _rootCauseAppService.Add(rootCauseRequest);
+            try
+            {
+                var result = await _rootCauseAppService.Add(rootCauseRequest);
 
-            return Ok();
+                if (result.Success)
+                    return Ok();
+                else
+                    return BadRequest(new { result.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { ex.Message });
+            }
         }
 
         [HttpGet()]
@@ -42,17 +52,37 @@ namespace AIssist.Application.Api.Controllers
         [HttpPut()]
         public async Task<IActionResult> Update(RootCausePutRequest rootCauseRequest)
         {
-            await _rootCauseAppService.Update(rootCauseRequest);
+            try
+            {
+                var result = await _rootCauseAppService.Update(rootCauseRequest);
 
-            return Ok();
+                if (result.Success)
+                    return Ok();
+                else
+                    return BadRequest(new { result.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { ex.Message });
+            }
         }
 
         [HttpDelete("{rootCauseId}")]
         public async Task<IActionResult> Inactivate(long rootCauseId)
         {
-            await _rootCauseAppService.Inactivate(rootCauseId);
+            try
+            {
+                var result = await _rootCauseAppService.Inactivate(rootCauseId);
 
-            return Ok();
+                if (result.Success)
+                    return Ok();
+                else
+                    return BadRequest(new { result.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { ex.Message });
+            }
         }
     }
 }
