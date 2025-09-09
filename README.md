@@ -7,9 +7,8 @@ Desenvolvimento de um Sistema Integrado para Gestão de Chamados e Suporte Técn
 AIssist é um aplicativo de gestão de chamados que utiliza Inteligência Artificial para tornar o suporte mais ágil, inteligente e eficiente. A plataforma permite gerenciar usuários com diferentes perfis e permissões, sugere soluções rápidas por meio de IA, possibilita que múltiplos chamados sejam atendidos ao mesmo tempo e envia notificações automáticas para manter equipe e requerentes sempre atualizados. Além disso, oferece relatórios detalhados de históricos, garante segurança dos dados e conta com uma interface moderna, responsiva e compatível com os principais navegadores. Desenvolvido com foco em boas práticas.
 
 ## 📋 Backlog de Produto
-- [ ] [Funcionalidade 1](https://github.com/DANFAGUNDES0/PimWeb/blob/main/Requisitos%3Etxt)
-- [ ] Funcionalidade 2
-- [ ] Funcionalidade 3
+- [ ] [REQUISITOS](https://github.com/DANFAGUNDES0/PimWeb/blob/main/Requisitos%3Etxt)
+
 
 ## 📅 Cronograma do Projeto
 
@@ -101,14 +100,17 @@ AIssist é um aplicativo de gestão de chamados que utiliza Inteligência Artifi
 npm install
 
 # Rodar em ambiente de desenvolvimento
-npm start
+ng serve
 
 # Rodar testes
 npm test
+
+# Limpar Terminal
+clear
 ```
 
 ## 📑 Documentação
-Acesse a pasta [docs](./docs).
+Acesse a pasta ...
 
 ## 👥 Equipe
 - Daniel fagundes – Dev Frontend  – [GitHub](https://github.com/DANFAGUNDES0) | [LinkedIn](https://www.linkedin.com/in/daniel-fagundes-916ba4246?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
