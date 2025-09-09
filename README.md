@@ -17,9 +17,8 @@ AIssist é um aplicativo de gestão de chamados que utiliza Inteligência Artifi
 - Tela Home  
 
 ## Semana 2
-- Criação da tela de causas raiz
-- Tela de logs
-- Criação de ticket
+- Tela de login
+
 
 ## Semana 3
 
@@ -69,8 +68,8 @@ AIssist é um aplicativo de gestão de chamados que utiliza Inteligência Artifi
 ## 📊 Tabela de Sprints
 | Sprint | Período        | Documentação |
 |--------|----------------|--------------|
-| 1      | 18/08 - 24/08  | [Doc Sprint 1](a2740257c20900c16a4060abc19eb0ba92fcc126) 
-| 2      | 25/08 - 31/08  | [Doc Sprint 2](docs/Sprint2.md) 
+| 1      | 18/08 - 24/08  | [Tela Home](https://youtu.be/p1ZCfkPH6vc?si=l5mo9ty-ay9HPPcU) 
+| 2      | 25/08 - 31/08  | [Tela de Login](https://youtu.be/OK7liYvUiqg?si=ZWfbSZCNUoAwCuJ0)
 | 3      | 01/09 - 07/09  | [Doc Sprint 2](docs/Sprint2.md) 
 | 4      | 08/09 - 14/09  | [Doc Sprint 2](docs/Sprint2.md) 
 | 5      | 15/09 - 21/09  | [Doc Sprint 2](docs/Sprint2.md) 
