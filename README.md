@@ -3,7 +3,7 @@
 # AIssist
 
 <p align="center">
-      <img src="docs/Img/logo.png" alt="logo da AIssist" width="200">
+      <img src="docs/img/logo.png" alt="logo da AIssist" width="200">
       <h2 align="center"> AIssist</h2>
 </p>
 
@@ -14,8 +14,6 @@
   <a href ="#dor">DoR</a>  |
   <a href ="#dod">DoD</a>  |
   <a href ="#sprint"> Cronograma de Sprints</a>  |
-  <a href ="#tecnologias">Tecnologias</a> |
-  <a href ="#manual">Manual de Instalação</a>  | 
   <a href ="#equipe"> Equipe</a> |
 </p>
 
