@@ -18,41 +18,84 @@ namespace AIssist.Application.Api.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(long id)
         {
-            var result = await _userAppService.GetById(id);
+            try
+            {
+                var result = await _userAppService.GetById(id);
 
-            return Ok(result);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { ex.Message });
+            }
         }
 
         [HttpPost]
         public async Task<IActionResult> Add(UserPostRequest userRequest)
         {
-            await _userAppService.Add(userRequest);
-
-            return Ok();
+            try
+            {
+                var result = await _userAppService.Add(userRequest);
+                if (result.Success)
+                    return Ok();
+                else
+                    return BadRequest(new { result.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { ex.Message });
+            }
         }
 
         [HttpGet()]
         public async Task<IActionResult> Get()
         {
-            var result = await _userAppService.Get();
+            try
+            {
+                var result = await _userAppService.Get();
 
-            return Ok(result);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { ex.Message });
+            }
         }
 
         [HttpPut()]
         public async Task<IActionResult> Update(UserPutRequest userRequest)
         {
-            await _userAppService.Update(userRequest);
+            try
+            {
+                var result = await _userAppService.Update(userRequest);
 
-            return Ok();
+                if (result.Success)
+                    return Ok();
+                else
+                    return BadRequest(new { result.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { ex.Message });
+            }
         }
 
         [HttpDelete("{userId}")]
         public async Task<IActionResult> Inactivate(long userId)
         {
-            await _userAppService.Inactivate(userId);
+            try
+            {
+                var result = await _userAppService.Inactivate(userId);
 
-            return Ok();
+                if (result.Success)
+                    return Ok();
+                else
+                    return BadRequest(new { result.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { ex.Message });
+            }
         }
     }
 }

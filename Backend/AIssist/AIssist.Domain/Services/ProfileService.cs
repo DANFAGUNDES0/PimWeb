@@ -1,5 +1,4 @@
 ﻿using AIssist.Domain.Entities;
-using AIssist.Domain.Http.Request.Profile;
 using AIssist.Domain.Services.Interfaces;
 using Supabase;
 
@@ -14,16 +13,11 @@ namespace AIssist.Domain.Services
             _supabaseclient = supabaseclient;
         }
 
-        public async Task Add(ProfileRequest entity)
+        public async Task Add(Profiles entity)
         {
-            var profile = new Profiles
-            {
-                Profile = "coordenador",
-                Created_By = "thor",
-                Updated_At = DateTime.Now,
-                Updated_By = "thor"
-            };
-            await _supabaseclient.From<Profiles>().Insert(profile);
+            await _supabaseclient
+                .From<Profiles>()
+                .Insert(entity);
         }
 
         public async Task Inactivate(long entityId)

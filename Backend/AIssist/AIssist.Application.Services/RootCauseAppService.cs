@@ -25,7 +25,6 @@ namespace AIssist.Application.Services
         {
             var response = new DefaultResponse();
             var rootCause = _mapper.Map<RootCauses>(entity);
-
             var RootCauseresult = _rootCauseService.Add(rootCause);
             RootCauseresult.Wait();
 
@@ -47,9 +46,7 @@ namespace AIssist.Application.Services
 
         public Task<DefaultResponse> Inactivate(long entityId)
         {
-
             var response = new DefaultResponse();
-
             var rootCauseResult = _rootCauseService.Inactivate(entityId);
             rootCauseResult.Wait();
 
@@ -85,9 +82,7 @@ namespace AIssist.Application.Services
         {
             var response = new DefaultResponse();
             var rootCause = _mapper.Map<RootCauses>(entity);
-
             var rootCauseResult = _rootCauseService.Update(rootCause);
-
             rootCauseResult.Wait();
 
             if (rootCauseResult.IsCompletedSuccessfully)

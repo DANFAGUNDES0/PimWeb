@@ -10,6 +10,7 @@ namespace AIssist.Domain.Services.Interfaces
         Task<List<Users>> Get();
         Task Inactivate(long entityId);
         Task<Users> GetByUsername(string username);
+        Task UpdateRefreshToken(Users entity);
     }
 }
 

@@ -32,6 +32,12 @@ namespace AIssist.Domain.Entities
 
         [Column("active")]
         public bool Active { get; set; }
+
+        [Column("refresh_token")]
+        public string? RefreshToken { get; set; }
+
+        [Column("refresh_token_expiry_time")]
+        public DateTime? RefreshTokenExpiryTime { get; set; }
     }
 }
 

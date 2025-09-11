@@ -18,9 +18,16 @@ namespace AIssist.Application.Api.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(long id)
         {
-            var result = await _rootCauseAppService.GetById(id);
+            try
+            {
+                var result = await _rootCauseAppService.GetById(id);
 
-            return Ok(result);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { ex.Message });
+            }
         }
 
         [HttpPost]
@@ -44,9 +51,16 @@ namespace AIssist.Application.Api.Controllers
         [HttpGet()]
         public async Task<IActionResult> Get()
         {
-            var result = await _rootCauseAppService.Get();
+            try
+            {
+                var result = await _rootCauseAppService.Get();
 
-            return Ok(result);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { ex.Message });
+            }
         }
 
         [HttpPut()]

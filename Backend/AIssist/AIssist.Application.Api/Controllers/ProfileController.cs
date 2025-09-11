@@ -19,41 +19,82 @@ namespace AIssist.Application.Api.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(long id)
         {
-            var result = await _profileAppService.GetById(id);
+            try
+            {
+                var result = await _profileAppService.GetById(id);
 
-            return Ok(result);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { ex.Message });
+            }
         }
 
         [HttpPost]
         public async Task<IActionResult> Add(ProfileRequest profileRequest)
         {
-            await _profileAppService.Add(profileRequest);
+            try
+            {
+                var result = await _profileAppService.Add(profileRequest);
 
-            return Ok();
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { ex.Message });
+            }
         }
 
         [HttpGet()]
         public async Task<IActionResult> Get()
         {
-            var result = await _profileAppService.Get();
+            try
+            {
+                var result = await _profileAppService.Get();
 
-            return Ok(result);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { ex.Message });
+            }          
         }
 
         [HttpPut()]
         public async Task<IActionResult> Update(ProfileRequest profileRequest)
         {
-            await _profileAppService.Update(profileRequest);
+            try
+            {
+                var result = await _profileAppService.Update(profileRequest);
 
-            return Ok();
+                if (result.Success)
+                    return Ok();
+                else
+                    return BadRequest(new { result.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { ex.Message });
+            }
         }
 
         [HttpDelete("{profileId}")]
         public async Task<IActionResult> Inactivate(long profileId)
         {
-            await _profileAppService.Inactivate(profileId);
+            try
+            {
+                var result = await _profileAppService.Inactivate(profileId);
 
-            return Ok();
+                if (result.Success)
+                    return Ok();
+                else
+                    return BadRequest(new { result.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { ex.Message });
+            }
         }
     }
 }

@@ -66,6 +66,17 @@ namespace AIssist.Domain.Services
                 .Set(s => s.Updated_At, entity.Updated_At)
                 .Update();
         }
+
+        public async Task UpdateRefreshToken(Users entity)
+        {
+            await _supabaseclient
+                .From<Users>()
+                .Where(w => w.Id == entity.Id)
+                .Set(s => s.RefreshToken, entity.RefreshToken)
+                .Set(s => s.RefreshTokenExpiryTime, entity.RefreshTokenExpiryTime)
+                .Set(s => s.Updated_At, entity.Updated_At)
+                .Update();
+        }
     }
 }
 

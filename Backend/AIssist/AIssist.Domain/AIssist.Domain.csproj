@@ -25,6 +25,8 @@
     <None Remove="Services\Interfaces\" />
     <None Remove="Http\Response\Log\" />
     <None Remove="Http\Response\Login\" />
+    <None Remove="Http\Request\Login\" />
+    <None Remove="Http\Response\Users\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
@@ -40,5 +42,7 @@
     <Folder Include="Services\Interfaces\" />
     <Folder Include="Http\Response\Log\" />
     <Folder Include="Http\Response\Login\" />
+    <Folder Include="Http\Request\Login\" />
+    <Folder Include="Http\Response\Users\" />
   </ItemGroup>
 </Project>

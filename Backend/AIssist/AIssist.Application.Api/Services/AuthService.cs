@@ -1,9 +1,10 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using AIssist.Application.Api.Services.Interfaces;
 using AIssist.Domain.Entities;
-using AIssist.Domain.Http.Request.User;
+using AIssist.Domain.Http.Request.Login;
 using AIssist.Domain.Http.Response.Login;
 using AIssist.Domain.Services.Interfaces;
 using Microsoft.AspNetCore.Identity;
@@ -15,10 +16,12 @@ namespace AIssist.Application.Api.Services
 	{
         private readonly IUserService _userService;
         private readonly IConfiguration _configuration;
+        private readonly IProfileService _profileService;
 
-        public AuthService(IConfiguration configuration, IUserService userService)
+        public AuthService(IConfiguration configuration, IUserService userService, IProfileService profileService)
 		{
             _userService = userService;
+            _profileService = profileService;
             _configuration = configuration;
         }
 
@@ -38,22 +41,45 @@ namespace AIssist.Application.Api.Services
             return CreateTokenResponse(user);
         }
 
-        private LoginResponse CreateTokenResponse(Users? user)
+        public Task<LoginResponse?>? RefreshTokensAsync(RefreshTokenRequest request)
+        {
+            var user = ValidateRefreshToken(request.UserId, request.RefreshToken);
+            if (user is null)
+                return null;
+
+            return Task.FromResult(CreateTokenResponse(user));
+        }
+
+        private Users? ValidateRefreshToken(long userId, string refreshToken)
+        {
+            var user = _userService.GetById(userId).Result.First();
+            if (user is null || user.RefreshToken != refreshToken
+                || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
+            {
+                return null;
+            }
+
+            return user;
+        }
+
+        private LoginResponse CreateTokenResponse(Users user)
         {
             return new LoginResponse
             {
-                User = user,
-                AccessToken = CreateToken(user)
+                AccessToken = CreateToken(user),
+                RefreshToken = GenerateAndSaveRefreshTokenAsync(user).Result
             };
         }
 
         private string CreateToken(Users user)
         {
+            var profile = _profileService.GetById(user.Profile_Id).Result.First();
+
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, user.Username),
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
-                //new Claim(ClaimTypes.Role, user.Role)
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Role, profile.Profile)
             };
 
             var key = new SymmetricSecurityKey(
@@ -70,6 +96,23 @@ namespace AIssist.Application.Api.Services
             );
 
             return new JwtSecurityTokenHandler().WriteToken(tokenDescriptor);
+        }
+
+        private static string GenerateRefreshToken()
+        {
+            var randomNumber = new byte[32];
+            using var rng = RandomNumberGenerator.Create();
+            rng.GetBytes(randomNumber);
+            return Convert.ToBase64String(randomNumber);
+        }
+
+        private async Task<string> GenerateAndSaveRefreshTokenAsync(Users user)
+        {
+            var refreshToken = GenerateRefreshToken();
+            user.RefreshToken = refreshToken;
+            user.RefreshTokenExpiryTime = DateTime.UtcNow.AddHours(3);
+            await _userService.UpdateRefreshToken(user);
+            return refreshToken;
         }
     }
 }
