@@ -1,0 +1,15 @@
+<div class="login-container">
+  <div class="login-box">
+    <h1>LOGO</h1>
+    <form (ngSubmit)="onLogin()">
+      <label>Email ou usuário</label>
+      <input type="text" [(ngModel)]="loginData.username" name="username" required />
+
+      <label>Senha</label>
+      <input type="password" [(ngModel)]="loginData.password" name="password" required />
+
+      <button type="submit">Login</button>
+      <a routerLink="/recuperar-senha">Esqueci minha senha</a>
+    </form>
+  </div>
+</div>
