@@ -5,8 +5,10 @@ import { UsuariosComponent } from './views/usuarios/usuarios.component';
 import { TicketsComponent } from './views/tickets/tickets.component';
 import { RelatoriosComponent } from './views/relatorios/relatorios.component';
 import { AssuntosComponent } from './views/assuntos/assuntos.component';
+import { LoginComponent } from './views/login/login.component';
 
 export const routes: Routes = [
+  { path: 'login', component: LoginComponent },
   {
     path: '',
     component: DashboardLayoutComponent,
