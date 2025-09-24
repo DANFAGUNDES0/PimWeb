@@ -12,6 +12,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AIssist.Domain\AIssist.Domain.csproj" />
     <ProjectReference Include="..\AIssist.Application.Services\AIssist.Application.Services.csproj" />
+    <ProjectReference Include="..\AIssist.Shared\AIssist.Shared.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Configs\" />

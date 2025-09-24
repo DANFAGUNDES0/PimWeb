@@ -27,6 +27,9 @@
     <None Remove="Http\Response\Login\" />
     <None Remove="Http\Request\Login\" />
     <None Remove="Http\Response\Users\" />
+    <None Remove="Http\Request\Ticket\" />
+    <None Remove="Enums\" />
+    <None Remove="Http\Response\Tickets\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
@@ -44,5 +47,8 @@
     <Folder Include="Http\Response\Login\" />
     <Folder Include="Http\Request\Login\" />
     <Folder Include="Http\Response\Users\" />
+    <Folder Include="Http\Request\Ticket\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Http\Response\Tickets\" />
   </ItemGroup>
 </Project>

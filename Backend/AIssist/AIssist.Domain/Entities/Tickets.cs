@@ -15,6 +15,9 @@ namespace AIssist.Domain.Entities
         [Column("solution")]
         public string? Solution { get; set; }
 
+        [Column("ticket_number")]
+        public string? Ticket_Number { get; set; }
+
         [Column("assignee_id")]
         public long Assignee_Id { get; set; }
 

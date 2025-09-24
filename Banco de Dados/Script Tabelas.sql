@@ -1,0 +1,137 @@
+IF OBJECT_ID('dbo.Criticalities', 'U') IS NOT NULL
+    DROP TABLE dbo.Criticalities;
+GO
+
+CREATE TABLE dbo.Criticalities (
+    Id BIGINT IDENTITY(1,1) NOT NULL,
+    Criticality NVARCHAR(255) NOT NULL,
+    CreatedAt DATETIMEOFFSET NOT NULL DEFAULT SYSDATETIMEOFFSET(),
+    CONSTRAINT PK_Criticalities PRIMARY KEY (Id),
+    CONSTRAINT UQ_Criticalities_Criticality UNIQUE (Criticality)
+);
+GO
+
+IF OBJECT_ID('dbo.Profiles', 'U') IS NOT NULL
+    DROP TABLE dbo.Profiles;
+GO
+
+CREATE TABLE dbo.Profiles (
+    Id BIGINT IDENTITY(1,1) NOT NULL,
+    CreatedAt DATETIMEOFFSET NOT NULL DEFAULT SYSDATETIMEOFFSET(),
+    Profile NVARCHAR(255) NOT NULL,
+    CreatedBy NVARCHAR(255) NOT NULL,
+    UpdatedAt DATETIME2 NOT NULL,
+    UpdatedBy NVARCHAR(255) NOT NULL,
+    Active BIT NOT NULL DEFAULT 1,
+    CONSTRAINT PK_Profiles PRIMARY KEY (Id)
+);
+GO
+
+IF OBJECT_ID('dbo.Users', 'U') IS NOT NULL
+    DROP TABLE dbo.Users;
+GO
+
+CREATE TABLE dbo.Users (
+    Id BIGINT IDENTITY(1,1) NOT NULL,
+    CreatedAt DATETIMEOFFSET NOT NULL DEFAULT SYSDATETIMEOFFSET(),
+    Name NVARCHAR(255) NOT NULL,
+    Email NVARCHAR(255) NOT NULL,
+    Username NVARCHAR(255) NOT NULL,
+    Password NVARCHAR(255) NOT NULL,
+    UpdatedAt DATETIME2 NOT NULL,
+    ProfileId BIGINT NOT NULL,
+    Active BIT NOT NULL DEFAULT 1,
+    RefreshToken NVARCHAR(255) NULL,
+    RefreshTokenExpiryTime DATETIME2 NULL,
+    CONSTRAINT PK_Users PRIMARY KEY (Id),
+    CONSTRAINT UQ_Users_Email UNIQUE (Email),
+    CONSTRAINT UQ_Users_Id UNIQUE (Id),
+    CONSTRAINT UQ_Users_Username UNIQUE (Username),
+    CONSTRAINT FK_Users_Profile FOREIGN KEY (ProfileId) 
+        REFERENCES dbo.Profiles (Id) 
+        ON UPDATE CASCADE 
+        ON DELETE NO ACTION
+);
+GO
+
+IF OBJECT_ID('dbo.RootCauses', 'U') IS NOT NULL
+    DROP TABLE dbo.RootCauses;
+GO
+
+CREATE TABLE dbo.RootCauses (
+    Id BIGINT IDENTITY(1,1) NOT NULL,
+    RootCause NVARCHAR(255) NOT NULL,
+    CriticalityId BIGINT NOT NULL,
+    CreatedAt DATETIMEOFFSET NOT NULL DEFAULT SYSDATETIMEOFFSET(),
+    CreatedBy NVARCHAR(255) NOT NULL,
+    UpdatedAt DATETIME2 NOT NULL,
+    UpdatedBy NVARCHAR(255) NOT NULL,
+    Active BIT NOT NULL DEFAULT 1,
+    CONSTRAINT PK_RootCauses PRIMARY KEY (Id),
+    CONSTRAINT UQ_RootCauses_RootCause UNIQUE (RootCause),
+    CONSTRAINT FK_RootCauses_Criticality FOREIGN KEY (CriticalityId) 
+        REFERENCES dbo.Criticalities (Id) 
+        ON UPDATE CASCADE 
+        ON DELETE NO ACTION
+);
+GO
+
+IF OBJECT_ID('dbo.Status', 'U') IS NOT NULL
+    DROP TABLE dbo.Status;
+GO
+
+CREATE TABLE dbo.Status (
+    Id BIGINT IDENTITY(1,1) NOT NULL,
+    Status NVARCHAR(255) NOT NULL,
+    CreatedAt DATETIMEOFFSET NOT NULL DEFAULT SYSDATETIMEOFFSET(),
+    CONSTRAINT PK_Status PRIMARY KEY (Id),
+    CONSTRAINT UQ_Status_Status UNIQUE (Status)
+);
+GO
+
+IF OBJECT_ID('dbo.Tickets', 'U') IS NOT NULL
+    DROP TABLE dbo.Tickets;
+GO
+
+CREATE TABLE dbo.Tickets (
+    Id BIGINT IDENTITY(1,1) NOT NULL,
+    Description NVARCHAR(MAX) NOT NULL,
+    Solution NVARCHAR(MAX) NOT NULL,
+    AssigneeId BIGINT NOT NULL,
+    ReporterId BIGINT NOT NULL,
+    StatusId BIGINT NOT NULL,
+    RootCauseId BIGINT NOT NULL,
+    CreatedAt DATETIMEOFFSET NOT NULL DEFAULT SYSDATETIMEOFFSET(),
+    UpdatedAt DATETIME2 NOT NULL,
+    CONSTRAINT PK_Tickets PRIMARY KEY (Id),
+    CONSTRAINT FK_Tickets_Assignee FOREIGN KEY (AssigneeId) 
+        REFERENCES dbo.Users (Id) 
+        ON UPDATE NO ACTION 
+        ON DELETE NO ACTION,
+    CONSTRAINT FK_Tickets_Reporter FOREIGN KEY (ReporterId) 
+        REFERENCES dbo.Users (Id) 
+        ON UPDATE NO ACTION 
+        ON DELETE NO ACTION,
+    CONSTRAINT FK_Tickets_RootCause FOREIGN KEY (RootCauseId) 
+        REFERENCES dbo.RootCauses (Id) 
+        ON UPDATE NO ACTION 
+        ON DELETE NO ACTION,
+    CONSTRAINT FK_Tickets_Status FOREIGN KEY (StatusId) 
+        REFERENCES dbo.Status (Id) 
+        ON UPDATE NO ACTION 
+        ON DELETE NO ACTION
+);
+GO
+
+IF OBJECT_ID('dbo.Logs', 'U') IS NOT NULL
+    DROP TABLE dbo.Logs;
+GO
+
+CREATE TABLE dbo.Logs (
+    Id BIGINT IDENTITY(1,1) NOT NULL,
+    Action NVARCHAR(255) NOT NULL,
+    Description NVARCHAR(255) NOT NULL,
+    CreatedAt DATETIMEOFFSET NOT NULL,
+    CONSTRAINT PK_Logs PRIMARY KEY (Id)
+);
+GO

@@ -21,6 +21,17 @@ var options = new SupabaseOptions
 
 builder.Services.AddSingleton(provider => new Client(url, key, options));
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngular",
+        policy => policy
+            .WithOrigins("http://localhost:4200") // URL do seu frontend
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+    );
+});
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIssist.Domain", "AIssist.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIssist.Infrastructure.Ioc", "AIssist.Infrastructure.Ioc\AIssist.Infrastructure.Ioc.csproj", "{BCB3E15E-6A9F-4D78-8829-7C4EFE86EC5B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIssist.Shared", "AIssist.Shared\AIssist.Shared.csproj", "{01C13EF2-6909-4F8B-83DD-D530D3738D09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{BCB3E15E-6A9F-4D78-8829-7C4EFE86EC5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCB3E15E-6A9F-4D78-8829-7C4EFE86EC5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCB3E15E-6A9F-4D78-8829-7C4EFE86EC5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01C13EF2-6909-4F8B-83DD-D530D3738D09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01C13EF2-6909-4F8B-83DD-D530D3738D09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01C13EF2-6909-4F8B-83DD-D530D3738D09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01C13EF2-6909-4F8B-83DD-D530D3738D09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

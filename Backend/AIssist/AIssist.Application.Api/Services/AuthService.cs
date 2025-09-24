@@ -67,7 +67,8 @@ namespace AIssist.Application.Api.Services
             return new LoginResponse
             {
                 AccessToken = CreateToken(user),
-                RefreshToken = GenerateAndSaveRefreshTokenAsync(user).Result
+                RefreshToken = GenerateAndSaveRefreshTokenAsync(user).Result,
+                Username = user.Username
             };
         }
 

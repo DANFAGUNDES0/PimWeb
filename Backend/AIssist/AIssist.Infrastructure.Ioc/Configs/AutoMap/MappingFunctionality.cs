@@ -12,7 +12,7 @@ namespace AIssist.Infrastructure.Ioc.Configs.AutoMap
             .ForMember(p => p.Id, o => o.MapFrom(p => p.Id))
             .ForMember(p => p.Description, o => o.MapFrom(p => p.Functionality))
             .ForMember(p => p.Created_By, o => o.MapFrom(p => p.CreatedBy))
-            .ForMember(p => p.Updated_At, o => o.MapFrom(p => DateTime.Now));
+            .ForMember(p => p.Updated_At, o => o.MapFrom(p => DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")));
         }
     }
 }
