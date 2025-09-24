@@ -1,60 +1,60 @@
-# Prerequisites
-*.d
-**/.DS_Store
-vs/
-obj/
-
-
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
+# ========================================
+# Visual Studio / .NET
+# ========================================
+.vs/                   # Configurações locais do Visual Studio
+*.user                 # Arquivos de usuário
+*.suo                  # Arquivos de solução do usuário
+*.userosscache
+*.sln.docstates
+[Bb]in/                # Binários compilados
+[Oo]bj/                # Objetos compilados
+[Ll]og/                # Logs
+[Tt]est[Rr]esult*/     # Resultados de testes
+[Bb]uild/              # Pastas de build
+*.dbmdl
+*.bak
+*.mdf
+*.ldf
 *.pdb
+*.cache
+*.coverage*
+*.tmp
+*.log
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
-.qodo
+# Pacotes NuGet
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+project.lock.json
+
+# ========================================
+# Angular / Node
+# ========================================
+node_modules/
+dist/
+coverage/
+*.tgz
+
+# ========================================
+# macOS
+# ========================================
 .DS_Store
-obj/
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
 
+# ========================================
+# Outros arquivos de sistema
+# ========================================
+Thumbs.db               # Windows
+ehthumbs.db
+desktop.ini
+*.swp                  # Arquivos temporários de editores (Vim, etc.)
+*.swo
+*.tmp
+*.bak
+*.orig
