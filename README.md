@@ -14,21 +14,8 @@ AIssist é um aplicativo de gestão de chamados que utiliza Inteligência Artifi
 ## 📅 [Cronograma do Projeto](https://github.com/DANFAGUNDES0/PimWeb/blob/main/Cronograma%20do%20Projeto) 
 
 
-## 📊 Tabela de Sprints
-| Sprint | Período        | Prototipo |
-|--------|----------------|--------------|
-| 1      | 18/08 - 24/08  | [Tela Home](https://youtu.be/p1ZCfkPH6vc?si=l5mo9ty-ay9HPPcU) 
-| 2      | 25/08 - 31/08  | [Tela de Login](https://youtu.be/OK7liYvUiqg?si=ZWfbSZCNUoAwCuJ0)
-| 3      | 01/09 - 07/09  | [Doc Sprint 2](docs/Sprint2.md) 
-| 4      | 08/09 - 14/09  | [Doc Sprint 2](docs/Sprint2.md) 
-| 5      | 15/09 - 21/09  | [Doc Sprint 2](docs/Sprint2.md) 
-| 6      | 22/09 - 28/09  | [Doc Sprint 2](docs/Sprint2.md) 
-| 7      | 29/09 - 05/10  | [Doc Sprint 2](docs/Sprint2.md) 
-| 8      | 06/10 - 12/10  | [Doc Sprint 2](docs/Sprint2.md) 
-| 9      | 13/10 - 19/10  | [Doc Sprint 2](docs/Sprint2.md) 
-| 10     | 20/10 - 26/10  | [Doc Sprint 2](docs/Sprint2.md) 
-| 11     | 27/10 - 02/11  | [Doc Sprint 2](docs/Sprint2.md) 
-| 12     | 03/11 - 09/11  | [Doc Sprint 2](docs/Sprint2.md) 
+## 📊 [Tabela de Sprints](https://github.com/DANFAGUNDES0/PimWeb/blob/main/Tabela%20das%20Sprints)
+
 
 
 ## 🛠 [Tecnologias Utilizadas](https://github.com/DANFAGUNDES0/PimWeb/blob/main/Tecnologias%20usadas)
