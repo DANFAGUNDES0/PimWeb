@@ -1,0 +1,56 @@
+@import '../../../../styles/variables';
+
+.ticket-create-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  color: #fff;
+
+  .form-section {
+    width: 60%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    select, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 4px;
+      border: 1px solid $textbox-border;
+      background: $default-background;
+      color: #fff;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+  }
+
+  .ia-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    textarea {
+        color: $title-text-color;
+        height: 200px;
+        background: $default-background;
+        border-radius: .5rem;
+        border: 1px solid $textbox-border;
+    }
+
+    .feedback {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        span {
+            font-weight: bold;
+        }
+    }
+  }
+}

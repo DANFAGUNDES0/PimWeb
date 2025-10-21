@@ -1,0 +1,80 @@
+@import '../../../styles/variables';
+
+.dialog {
+  background: $modal-background;
+  padding: 24px;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+.dialog-title {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: $text-primary-color;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  color: $text-primary-color;
+  font-weight: 300;
+}
+
+.form-group input {
+  padding: 10px 12px;
+  color: $input-border-color;
+  border-radius: 8px;
+  border: 1px solid $input-border-color;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  background-color: $input-background-color;
+}
+
+.form-group input:focus {
+  color: $input-border-color-focus;
+  border-color: $input-border-color-focus;
+  outline: none;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-primary {
+  background-color: $primary-button-background;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: $primary-button-background-hover;
+}
+
+.btn-secondary {
+  background-color: $canceled-ticket-background;
+  color: $text-primary-color;
+}
+
+.btn-secondary:hover {
+  background-color: $canceled-ticket-background-hover;
+}

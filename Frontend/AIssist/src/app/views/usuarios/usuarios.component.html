@@ -1,1 +1,68 @@
-<p>usuarios works!</p>
+<div class="container-dashboard">
+  <!-- Header do dashboard -->
+  <div class="dashboard-header">
+        <div>
+            <h2 class="page-title">Usuários</h2>
+            <p class="page-subtitle">{{ totalUsuarios }} Usuários criados...</p>
+        </div>
+        <div class="dashboard-header-buttons">
+            <app-button
+                texto="+ Adicionar Filtro"
+                size="large"
+                type="primary"
+                [outlined]="true"
+            />
+            <app-button
+                texto="Novo Usuário"
+                size="large"
+                type="primary"
+            />
+        </div>
+    </div>
+
+  <!-- Tabela de usuários -->
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Perfil</th>
+          <th>Ativo</th>
+          <th>Criado em</th>
+          <th>Atualizado em</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of usuarios">
+          <td>{{ usuario.id }}</td>
+          <td>{{ usuario.name }}</td>
+          <td>{{ usuario.username }}</td>
+          <td>{{ usuario.email }}</td>
+          <td>{{ getProfileName(usuario.profile) }}</td>
+          <td>
+            <span class="badge" [ngClass]="usuario.active ? 'ativo' : 'inativo'">
+                {{ usuario.active ? 'Ativo' : 'Inativo' }}
+            </span>
+          </td>
+          <td>{{ usuario.created_At }}</td>
+          <td>{{ usuario.updated_At }}</td>
+          <td class="acoes">
+            <button class="btn edit" (click)="executarAcao({ type: 'edit', row: usuario })">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button class="btn delete" (click)="executarAcao({ type: 'delete', row: usuario })">
+              <mat-icon>delete</mat-icon>
+            </button>
+            <button class="btn toogle" (click)="executarAcao({ type: 'toggle', row: usuario })">
+              <mat-icon>topic</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

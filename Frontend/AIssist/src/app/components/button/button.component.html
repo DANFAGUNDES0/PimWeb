@@ -1,3 +1,6 @@
-<button [class]="buttonClasses" [disabled]="!active">
+<button 
+  [class]="buttonClasses" 
+  (click)="onClick()" 
+  [disabled]="!active">
   {{ texto }}
 </button>

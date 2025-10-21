@@ -1,0 +1,66 @@
+<div class="container-dashboard">
+  <!-- Header -->
+  <div class="dashboard-header">
+    <div>
+      <h2 class="page-title">Tickets</h2>
+      <p class="page-subtitle">{{ totalTickets }} Tickets registrados...</p>
+    </div>
+    <div class="dashboard-header-buttons">
+      <app-button
+        texto="+ Adicionar Filtro"
+        size="large"
+        type="primary"
+        [outlined]="true"
+      />
+      <app-button
+        texto="Novo Ticket"
+        size="large"
+        type="primary"
+        (click)="irParaNovoTicket()"
+    ></app-button>
+    </div>
+  </div>
+
+  <!-- Tabela -->
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Número</th>
+          <th>Descrição</th>
+          <th>Solução</th>
+          <th>Responsável</th>
+          <th>Reportado por</th>
+          <th>Status</th>
+          <th>Causa Raiz</th>
+          <th>Criado em</th>
+          <th>Atualizado em</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ticket of tickets">
+          <td>{{ ticket.id }}</td>
+          <td>{{ ticket.ticket_number }}</td>
+          <td>{{ ticket.description }}</td>
+          <td>{{ ticket.solution || '-' }}</td>
+          <td>{{ ticket.assignee_id || '-' }}</td>
+          <td>{{ ticket.reporter_id || '-' }}</td>
+          <td>{{ ticket.status_id || '-' }}</td>
+          <td>{{ ticket.root_cause_id || '-' }}</td>
+          <td>{{ ticket.created_at }}</td>
+          <td>{{ ticket.updated_at }}</td>
+          <td class="acoes">
+            <button class="btn edit" (click)="executarAcao({ type: 'edit', row: ticket })">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button class="btn delete" (click)="executarAcao({ type: 'delete', row: ticket })">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

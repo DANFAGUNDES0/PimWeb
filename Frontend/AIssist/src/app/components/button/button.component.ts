@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -15,6 +15,8 @@ export class ButtonComponent {
   @Input() size: 'small' | 'large' = 'large';
   @Input() type: 'primary' | 'secondary' | 'tertiary' = 'primary';
 
+  @Output() click = new EventEmitter<void>();
+
   get buttonClasses(): string {
     const classes = [
       `${this.type}-${this.size}-button`,
@@ -24,5 +26,10 @@ export class ButtonComponent {
       this.outlined ? 'outlined' : ''
     ];
     return classes.join(' ');
+  }
+  onClick() {
+    if (this.active) {
+      this.click.emit();
+    }
   }
 }

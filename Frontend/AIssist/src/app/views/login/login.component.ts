@@ -1,7 +1,7 @@
 // src/app/views/login/login.component.ts
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../../../core/services/auth/auth.service';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
@@ -12,8 +12,8 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./login.component.scss'],
   standalone: true,
   imports: [
-    FormsModule,      // <- IMPORTAR AQUI
-    RouterModule      // <- para usar routerLink
+    FormsModule,
+    RouterModule
   ],
 })
 export class LoginComponent {
@@ -23,7 +23,7 @@ export class LoginComponent {
 
   onLogin() {
     this.authService.login(this.loginData).subscribe({
-      next: (res) => {
+      next: (res: any) => {
         // Armazena o token e dados do usuário
         localStorage.setItem('token', res.accessToken);
         localStorage.setItem('user', JSON.stringify(res.user));

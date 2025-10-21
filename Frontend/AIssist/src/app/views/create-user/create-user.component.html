@@ -1,0 +1,22 @@
+<!-- create-user.component.html -->
+<div class="login-container">
+  <div class="login-box">
+    <h1>LOGO</h1>
+    <form (ngSubmit)="onCreateUser()">
+      <label>Nome</label>
+      <input type="text" [(ngModel)]="userData.name" name="name" placeholder="Digite seu nome" required />
+
+      <label>Email</label>
+      <input type="email" [(ngModel)]="userData.email" name="email" placeholder="Digite seu email" required />
+
+      <label>Usuário</label>
+      <input type="text" [(ngModel)]="userData.username" name="username" placeholder="Digite um nome de usuário" required />
+
+      <label>Senha</label>
+      <input type="password" [(ngModel)]="userData.password" name="password" placeholder="Crie uma senha" required />
+
+      <button type="submit">Criar Conta</button>
+      <a routerLink="/login">Já tenho uma conta</a>
+    </form>
+  </div>
+</div>
