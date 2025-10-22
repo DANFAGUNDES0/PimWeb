@@ -1,7 +1,5 @@
-﻿using AIssist.Application.Services;
-using AIssist.Application.Services.Interfaces;
+﻿using AIssist.Application.Services.Interfaces;
 using AIssist.Domain.Http.Request.Ticket;
-using AIssist.Domain.Http.Request.User;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AIssist.Application.Api.Controllers

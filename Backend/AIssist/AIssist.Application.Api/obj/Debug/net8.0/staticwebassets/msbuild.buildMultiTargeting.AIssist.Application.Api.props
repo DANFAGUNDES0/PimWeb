@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../build/AIssist.Application.Api.props" />
-</Project>

@@ -3,7 +3,7 @@ using Supabase.Postgrest.Models;
 
 namespace AIssist.Domain.Entities
 {
-    [Table("Tickets")]
+    [Table("tickets")]
     public class Tickets : BaseModel
     {
         [PrimaryKey("id", false)]

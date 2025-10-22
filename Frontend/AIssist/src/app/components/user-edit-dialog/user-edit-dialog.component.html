@@ -1,7 +1,7 @@
-<div class="dialog">
+<div class="modal" role="dialog" *ngIf="aberto">
   <h2 class="dialog-title">Editar Usuário</h2>
 
-  <form [formGroup]="form" class="user-edit-form">
+  <form [formGroup]="form" class="user-edit-form" *ngIf="aberto">
     <div class="form-group">
       <label for="username">Nome de Usuário</label>
       <input id="username" type="text" formControlName="username" placeholder="Insira o nome de usuário">
@@ -17,19 +17,9 @@
       <input id="email" type="email" formControlName="email" placeholder="voce@exemplo.com">
     </div>
 
-    <div class="form-group">
-      <label for="password">Senha</label>
-      <input id="password" type="password" formControlName="password" placeholder="Insira a senha...">
-    </div>
-
-    <div class="form-group">
-      <label for="confirmPassword">Confirmar Senha</label>
-      <input id="confirmPassword" type="password" formControlName="confirmPassword" placeholder="Confirme a senha...">
-    </div>
-
     <div class="dialog-actions">
       <button type="button" class="btn btn-primary" (click)="confirmar()">Confirmar</button>
-      <button type="button" class="btn btn-secondary" (click)="cancelar()">Cancelar</button>
+      <button data-dismiss="modal" type="button" class="btn btn-secondary" (click)="cancelar()">Cancelar</button>
     </div>
   </form>
 </div>

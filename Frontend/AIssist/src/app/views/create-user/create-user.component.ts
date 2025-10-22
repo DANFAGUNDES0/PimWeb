@@ -22,7 +22,7 @@ export class CreateUserComponent {
 
   constructor(
     private userService: UserService,
-    private router: Router // ✅ injeta o Router
+    private router: Router
   ) {}
 
   onCreateUser() {

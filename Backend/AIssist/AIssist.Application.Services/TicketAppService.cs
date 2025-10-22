@@ -57,7 +57,7 @@ namespace AIssist.Application.Services
         }
 
         public Task<DefaultResponse> Update(TicketPutRequest entity)
-        {
+        {            
             var response = new DefaultResponse();
             var ticket = _mapper.Map<Tickets>(entity);
             var ticketResult = _ticketService.Update(ticket);

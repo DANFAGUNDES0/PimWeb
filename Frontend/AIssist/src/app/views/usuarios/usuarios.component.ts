@@ -5,6 +5,7 @@ import { ButtonComponent } from '../../components/button/button.component';
 import { UserEditDialogComponent } from '../../components/user-edit-dialog/user-edit-dialog.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule, MatDialog } from '@angular/material/dialog';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 interface Usuario extends UserResponse {
   created_At?: string;
@@ -14,7 +15,7 @@ interface Usuario extends UserResponse {
 @Component({
   selector: 'app-usuarios',
   standalone: true,
-  imports: [CommonModule, ButtonComponent, MatIconModule, MatDialogModule, UserEditDialogComponent],
+  imports: [CommonModule, ButtonComponent, MatIconModule, MatDialogModule, UserEditDialogComponent, MatTooltipModule],
   templateUrl: './usuarios.component.html',
   styleUrls: ['./usuarios.component.scss']
 })
@@ -23,6 +24,8 @@ export class UsuariosComponent implements OnInit {
   totalUsuarios = 0;
   paginaAtual = 1;
   totalPorPagina = 15;
+  modalAberto = false;
+  usuarioAtual: UserResponse | undefined;
 
   constructor(
     private userService: UserService,
@@ -37,17 +40,7 @@ export class UsuariosComponent implements OnInit {
     this.userService.getUsers().subscribe({
       next: (res: UserResponse[]) => {
         this.totalUsuarios = res.length;
-
-        this.usuarios = res.map(u => {
-          const createdRaw = (u as any).created_At || (u as any).createdAt;
-          const updatedRaw = (u as any).updated_At || (u as any).updatedAt;
-
-          return {
-            ...u,
-            created_At: createdRaw ? this.formatarDataLocal(createdRaw) : '',
-            updated_At: updatedRaw ? this.formatarDataLocal(updatedRaw) : ''
-          };
-        });
+        this.usuarios = res;
       },
       error: (err) => console.error('Erro ao buscar usuários:', err)
     });
@@ -67,18 +60,11 @@ export class UsuariosComponent implements OnInit {
   }
 
   openEditDialog(user: UserResponse) {
-    const dialogRef = this.dialog.open(UserEditDialogComponent, {
-      data: user
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        this.carregarUsuarios();
-      }
-    });
+    this.usuarioAtual = user;
+    this.modalAberto = true;
   }
 
-  private formatarDataLocal(data: string): string {
+  formatarDataLocal(data: string): string {
     const d = new Date(data);
     const dia = String(d.getDate()).padStart(2,'0');
     const mes = String(d.getMonth()+1).padStart(2,'0');
@@ -110,5 +96,9 @@ export class UsuariosComponent implements OnInit {
   carregarPagina(p: number) {
     this.paginaAtual = p;
     this.carregarUsuarios();
+  }
+
+  fecharModal(): void {
+    this.modalAberto = false;
   }
 }

@@ -1,5 +1,4 @@
 <div class="container-dashboard">
-  <!-- Header do dashboard -->
   <div class="dashboard-header">
         <div>
             <h2 class="page-title">Usuários</h2>
@@ -20,7 +19,6 @@
         </div>
     </div>
 
-  <!-- Tabela de usuários -->
   <div class="table-container">
     <table>
       <thead>
@@ -48,13 +46,13 @@
                 {{ usuario.active ? 'Ativo' : 'Inativo' }}
             </span>
           </td>
-          <td>{{ usuario.created_At }}</td>
-          <td>{{ usuario.updated_At }}</td>
+          <td>{{ formatarDataLocal(usuario.created_At!) }}</td>
+          <td>{{ formatarDataLocal(usuario.updated_At!) }}</td>
           <td class="acoes">
-            <button class="btn edit" (click)="executarAcao({ type: 'edit', row: usuario })">
+            <button matTooltip="Editar usuário" class="btn edit" (click)="executarAcao({ type: 'edit', row: usuario })">
               <mat-icon>edit</mat-icon>
             </button>
-            <button class="btn delete" (click)="executarAcao({ type: 'delete', row: usuario })">
+            <button matTooltip="Inativar usuário" class="btn delete" (click)="executarAcao({ type: 'delete', row: usuario })">
               <mat-icon>delete</mat-icon>
             </button>
             <button class="btn toogle" (click)="executarAcao({ type: 'toggle', row: usuario })">
@@ -64,5 +62,10 @@
         </tr>
       </tbody>
     </table>
+    <app-user-edit-dialog
+    (fechado)="fecharModal()"
+    [user]="usuarioAtual"
+    [aberto]="modalAberto">
+    </app-user-edit-dialog>
   </div>
 </div>

@@ -22,25 +22,24 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class UserEditDialogComponent {
   form: FormGroup;
-
+  @Input() aberto = false;
+  @Input() user: UserResponse | undefined;
+  @Output() fechado = new EventEmitter<void>();
   constructor(
     private fb: FormBuilder,
-    private userService: UserService,
-    @Inject(MAT_DIALOG_DATA) public data: UserResponse // ✅ aqui recebemos os dados
+    private userService: UserService
   ) {
     this.form = this.fb.group({
-      username: [this.data?.username || '', [Validators.required]],
-      name: [this.data?.name || '', [Validators.required]],
-      email: [this.data?.email || '', [Validators.required, Validators.email]],
-      password: [''],
-      confirmPassword: ['']
+      username: [this.user?.username || '', [Validators.required]],
+      name: [this.user?.name || '', [Validators.required]],
+      email: [this.user?.email || '', [Validators.required, Validators.email]]
     });
   }
 
   confirmar() {
     if (this.form.invalid) return;
 
-    const updatedUser = { ...this.data, ...this.form.value };
+    const updatedUser = { ...this.user, ...this.form.value };
     if (!updatedUser.password) delete updatedUser.password;
 
     this.userService.updateUser(updatedUser).subscribe({
@@ -50,6 +49,6 @@ export class UserEditDialogComponent {
   }
 
   cancelar() {
-    console.log('Fechar modal');
+    this.fechado.emit();
   }
 }
