@@ -13,6 +13,19 @@
   }
 }
 
+.outlined .primary-large-button {
+  background-color: $primary-button-background;
+  color: $primary-button-text;
+  width: 200px;
+  height: 46px;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: $primary-button-background-hover;
+    cursor: pointer;
+  }
+}
+
 .primary-small-button {
   background-color: $primary-button-background;
   color: $primary-button-text;

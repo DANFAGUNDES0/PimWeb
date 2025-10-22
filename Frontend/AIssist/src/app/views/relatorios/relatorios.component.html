@@ -1,1 +1,27 @@
-<p>relatorios works!</p>
+<div class="container-dashboard">
+  <div class="dashboard-header">
+    <div>
+      <h2 class="page-title">Relatórios</h2>
+    </div>
+    <div class="dashboard-header-buttons">
+      <app-button
+        texto="+ Adicionar Filtro"
+        size="large"
+        type="primary"
+        [outlined]="true"
+      ></app-button>
+      <app-button
+        texto="Exportar Relatório"
+        size="large"
+        type="primary"
+      ></app-button>
+    </div>
+  </div>
+
+  <div class="relatorios-container">
+    <div class="chart-container-med">
+        <canvas id="usuariosChart"></canvas>
+    </div>
+  </div>
+  
+</div>

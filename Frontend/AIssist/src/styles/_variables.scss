@@ -1,6 +1,8 @@
 $primary-button-background: #055DFC;
+$primary-button-background-hover: #00379e;
 $primary-button-background-transparent: #055bfc2d;
-$default-background: #24282C;
+
+$default-background: #131517;
 $primary-button-text: #FFFFFF;
 $seconday-button-background: #E94F54;
 $information-text-color: #B8B8B8;
@@ -13,11 +15,34 @@ $resolved-ticket-background: #7CBF6A;
 $open-ticket-background: #4A90E2;
 $waiting-ticket-background: #D9B56F;
 $in-progress-ticket-background: #876dd6;
+
 $canceled-ticket-background: #f73d36;
+$canceled-ticket-background-hover: #aa1f1b;
+
 $modal-background: #1A1C1E;
-$textbox-border: #979797;
+$chart-card-background: #17181a;
+$textbox-border: #6b6b6b;
 $title-text-size: 32px;
 $information-text-size: 14px;
 
+$text-primary-color: #e6e6e6;
+
+$input-background-color: #131517;
+$input-border-color: #979797;
+$input-border-color-focus: #bebebe;
+
 // Hovers
 $primary-button-background-hover: #003496;
+
+//Badges
+$badge-green-background: rgba(46, 172, 46, 0.2);
+$badge-green-text: rgb(46, 172, 46);
+
+$badge-red-background: rgba(233, 79, 84, 0.2);
+$badge-red-text: rgb(255, 114, 118);
+
+$badge-yellow-background: rgba(233, 210, 79, 0.2);
+$badge-yellow-text: rgb(255, 237, 132);
+
+$badge-purple-background: rgba(79, 82, 233, 0.2);
+$badge-purple-text: rgb(122, 124, 255);

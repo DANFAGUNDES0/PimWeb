@@ -26,14 +26,17 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   list-style: none;
   padding: 0;
   margin-top: 20%;
 }
 
-.sidebar ul li {
-  margin: 10px 0;
+.sidebar ul div li {
+  margin-top: 5px;
+}
+
+.logout-button {
+  margin-top: auto;
 }
 
 .bottom {
@@ -77,3 +80,4 @@
 .user img {
   border-radius: 50%;
 }
+

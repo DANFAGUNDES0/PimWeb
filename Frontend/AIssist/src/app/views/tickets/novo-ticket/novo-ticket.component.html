@@ -1,0 +1,34 @@
+<div class="ticket-create-container">
+  <div class="form-section">
+    <h2>← Voltar</h2>
+    <h1>Criar Ticket</h1>
+
+    <label for="assunto">Selecionar assunto</label>
+    <select id="assunto" [(ngModel)]="assunto">
+      <option *ngFor="let a of assuntosDisponiveis" [value]="a">{{ a }}</option>
+    </select>
+
+    <label for="descricao">Descrição</label>
+    <textarea
+      id="descricao"
+      placeholder="Descreva o problema..."
+      [(ngModel)]="descricao"
+    ></textarea>
+
+    <div class="buttons">
+      <app-button texto="Criar Ticket" (click)="criarTicket()"></app-button>
+      <app-button texto="Ajuda IA" (click)="ajudaIA()"></app-button>
+    </div>
+  </div>
+
+  <div class="ia-section">
+    <h2>Dicas Geradas IA</h2>
+    <textarea readonly [value]="dicasIA"></textarea>
+
+    <div class="feedback">
+      <span>Foi útil?</span>
+      <app-button texto="Sim" (click)="feedbackIA(true)"></app-button>
+      <app-button texto="Não" (click)="feedbackIA(false)"></app-button>
+    </div>
+  </div>
+</div>
