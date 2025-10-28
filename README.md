@@ -21,6 +21,20 @@ AIssist é um aplicativo de gestão de chamados que utiliza Inteligência Artifi
 ## 🛠 [Tecnologias Utilizadas](https://github.com/DANFAGUNDES0/PimWeb/blob/main/Tecnologias%20usadas)
 
 
+## 🏃‍ DoR - Definition of Ready
+* User Stories com Critérios de Aceitação
+* Subtarefas divididas a partir das US
+* Design no Figma
+* Modelagem do Banco de Dados
+* Diagrama de Rotas
+* Banco de Dados Vetorizado do Cliente
+## 🏆 DoD - Definition of Done
+* Manual de Usuário
+* Manual da Aplicação
+* Código completo
+
+
+
 ## 📂 Estrutura do Projeto
 ```bash
 📂 src
@@ -30,28 +44,39 @@ AIssist é um aplicativo de gestão de chamados que utiliza Inteligência Artifi
 ```
 
 
-## ▶️ Como Executar o Projeto
-```bash
-# Instalar dependências
-npm install
+## Como executar projeto
 
-# Rodar em ambiente de desenvolvimento
-npm start
+### Web:
+```
+- Baixe os arquivos do frontend;
+- Abra ele no Visual Studio Code e abra um terminal, ou se preferir, abra a pasta do projeto no cdm;
+- Rode o comando ng serve.
 
-# Rodar testes
-npm test
-
-# Limpar Terminal
-clear
-
-# Rodar codigo
-ng serve
+Saída Esperada:
+Frontend rodando em http://localhost:4200
 ```
 
+### Desktop:
+```
 
-## 📑 [Documentação](https://unipead-my.sharepoint.com/:w:/r/personal/thor_morciani_aluno_unip_br/_layouts/15/doc2.aspx?sourcedoc=%7B1D2D06D5-9F06-4BD9-B762-8C996F82C251%7D&file=ESTRUTURA_PIM%20III_2025(ADS).docx&action=default&mobileredirect=true&ct=1742257010336&wdOrigin=OFFICECOM-WEB.MAIN.UPLOAD&cid=202f14f5-52bb-4574-89b2-e684c5fdfcd1&wdPreviousSessionSrc=HarmonyWeb&wdPreviousSession=aac6cf91-617e-43a2-b1ba-8a6d90bb795e)
+```
 
-## [Manual do Usuario](https://github.com/DANFAGUNDES0/PimWeb/blob/main/manual%20do%20usuario.docx) 
+### Mobile:
+```
+
+```
+
+### Backend:
+```
+- Baixe os arquivos do backend;
+- Abra o projeto no Visual Studio e clique no botão de "play" e selecione a opção http.
+
+Saída Esperada:
+Servidor rodando em http://localhost:7158.
+UI do Swagger em http://localhost:7158/docs.```
+
+## Documentação
+[Documentação](https://unipead-my.sharepoint.com/:w:/g/personal/joao_vieira75_aluno_unip_br/EXikynN4GyZIkhTWs8CUuK8BK8ApoRWmykvJNajCrVFXSQ?e=dSb7XO)    
 
 
 ## 👥 Equipe
