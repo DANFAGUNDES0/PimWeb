@@ -37,7 +37,7 @@ AIssist é um aplicativo de gestão de chamados que utiliza Inteligência Artifi
 
 
 
-## 💻 Tecnologias <a id="tecnologias"></a>
+<h2 align="center"> 💻Tecnologias💻</h2>
 
 <h4 align="center">
  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"></a>
