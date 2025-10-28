@@ -1,14 +1,11 @@
-## AIssist
 <p align="center">
     <img src="Frontend/AIssist/src/assets/logo.png" alt="logo da AIssist" width="200">
     <h2 align="center"> AIssist</h2>
 </p>
 
+
+
 ## 📌 Descrição do Projeto
-Desenvolvimento de um Sistema Integrado para Gestão de Chamados e Suporte Técnico com Apoio de IA
-
-
-## 🏅 Desafio do Projeto
 AIssist é um aplicativo de gestão de chamados que utiliza Inteligência Artificial para tornar o suporte mais ágil, inteligente e eficiente. A plataforma permite gerenciar usuários com diferentes perfis e permissões, sugere soluções rápidas por meio de IA, possibilita que múltiplos chamados sejam atendidos ao mesmo tempo e envia notificações automáticas para manter equipe e requerentes sempre atualizados. Além disso, oferece relatórios detalhados de históricos, garante segurança dos dados e conta com uma interface moderna, responsiva e compatível com os principais navegadores. Desenvolvido com foco em boas práticas.
 
 
