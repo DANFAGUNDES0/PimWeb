@@ -1,4 +1,8 @@
 ## AIssist
+<p align="center">
+    <img src="Frontend/AIssist/src/assets/logo.png" alt="logo da AIssist" width="200">
+    <h2 align="center"> AIssist</h2>
+</p>
 
 ## 📌 Descrição do Projeto
 Desenvolvimento de um Sistema Integrado para Gestão de Chamados e Suporte Técnico com Apoio de IA
@@ -35,13 +39,15 @@ AIssist é um aplicativo de gestão de chamados que utiliza Inteligência Artifi
 
 
 
-## 📂 Estrutura do Projeto
-```bash
-📂 src
- ┣ 📂 components
- ┣ 📂 services
- ┗ app.module.ts
-```
+## 💻 Tecnologias <a id="tecnologias"></a>
+
+<h4 align="center">
+ <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"></a>
+ <a href="https://www.angular.dev/"><img src="https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white"/></a>
+ <a href="https://www.dotnet.microsoft.com/pt-br/languages/csharp/"><img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white"/></a> 
+ <a href="https://github.com/"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/></a>
+ <a href="https://www.figma.com/"><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/></a>
+</h4>
 
 
 ## Como executar projeto
@@ -66,17 +72,13 @@ Frontend rodando em http://localhost:4200
 
 ```
 
-### Backend:
-```
-- Baixe os arquivos do backend;
-- Abra o projeto no Visual Studio e clique no botão de "play" e selecione a opção http.
+##  📖 [Manual de Instalação](./docs/Manual%20de%20Instalação.md)
 
-Saída Esperada:
-Servidor rodando em http://localhost:7158.
-UI do Swagger em http://localhost:7158/docs.```
+##  📄  [Manual do Usuario](https://unipead-my.sharepoint.com/:w:/g/personal/daniel_filho61_aluno_unip_br/EeOTMdP0rnpOjn8n3VssFygBS6kaeWJOqZoovDanRrRUyw?e=94Q8bQ)
 
-## Documentação
-[Documentação](https://unipead-my.sharepoint.com/:w:/g/personal/joao_vieira75_aluno_unip_br/EXikynN4GyZIkhTWs8CUuK8BK8ApoRWmykvJNajCrVFXSQ?e=dSb7XO)    
+##  📁 [Documentação](https://unipead-my.sharepoint.com/:w:/g/personal/joao_vieira75_aluno_unip_br/EXikynN4GyZIkhTWs8CUuK8BK8ApoRWmykvJNajCrVFXSQ?e=dSb7XO)    
+
+##  🧾 [Diagramas UML](./docs/CasoDeUsoPIM.asta)
 
 
 ## 👥 Equipe
