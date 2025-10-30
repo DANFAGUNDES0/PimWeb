@@ -33,7 +33,7 @@ AIssist é um aplicativo de gestão de chamados que utiliza Inteligência Artifi
 
 
 ## 📖 Manual de Instalação <a id="manual"></a>
-[Manual de Instalação](./docs/Manual%20de%20Instalação.md)
+[Manual de Instalação]([./docs/Manual%20de%20Instalação.md](https://github.com/MuriloCSilva/PimWebUnip/blob/main/docs/Manual%20de%20Instala%C3%A7%C3%A3o.md))
 
 
 
