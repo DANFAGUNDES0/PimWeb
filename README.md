@@ -13,7 +13,8 @@ AIssist é um aplicativo de gestão de chamados que utiliza Inteligência Artifi
 
 
 
-## 📅 [Cronograma do Projeto](https://github.com/DANFAGUNDES0/PimWeb/blob/main/Cronograma%20do%20Projeto) 
+## 📅 Cronograma do Projeto
+[Cronograma do Projeto](https://github.com/DANFAGUNDES0/PimWeb/blob/main/Cronograma%20do%20Projeto) 
 
 
 ## 📊 [Tabela de Sprints](https://github.com/DANFAGUNDES0/PimWeb/blob/main/Tabela%20das%20Sprints)
