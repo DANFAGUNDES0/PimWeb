@@ -21,8 +21,15 @@ AIssist é um aplicativo de gestão de chamados que utiliza Inteligência Artifi
 [Tabela de Sprints](https://github.com/DANFAGUNDES0/PimWeb/blob/main/Tabela%20das%20Sprints)
 
 
-## 🛠 Tecnologias Utilizadas
-[Tecnologias Utilizadas](https://github.com/DANFAGUNDES0/PimWeb/blob/main/Tecnologias%20usadas)
+<h2 align="center"> 💻Tecnologias💻</h2>
+
+<h4 align="center">
+ <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"></a>
+ <a href="https://www.angular.dev/"><img src="https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white"/></a>
+ <a href="https://www.dotnet.microsoft.com/pt-br/languages/csharp/"><img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white"/></a> 
+ <a href="https://github.com/"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/></a>
+ <a href="https://www.figma.com/"><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/></a>
+</h4>
 
 ## 🏃‍ DoR - Definition of Ready
 * User Stories com Critérios de Aceitação
@@ -38,40 +45,10 @@ AIssist é um aplicativo de gestão de chamados que utiliza Inteligência Artifi
 
 
 
-<h2 align="center"> 💻Tecnologias💻</h2>
 
-<h4 align="center">
- <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"></a>
- <a href="https://www.angular.dev/"><img src="https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white"/></a>
- <a href="https://www.dotnet.microsoft.com/pt-br/languages/csharp/"><img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white"/></a> 
- <a href="https://github.com/"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/></a>
- <a href="https://www.figma.com/"><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/></a>
-</h4>
+## 📖 Manual de Instalação
+[Manual de instalação](https://github.com/DANFAGUNDES0/PimWeb/commit/a41070395cd126d7ceeaf561e6d83b72318f0a17)
 
-
-## Como executar projeto
-
-### Web:
-```
-- Baixe os arquivos do frontend;
-- Abra ele no Visual Studio Code e abra um terminal, ou se preferir, abra a pasta do projeto no cdm;
-- Rode o comando ng serve.
-
-Saída Esperada:
-Frontend rodando em http://localhost:4200
-```
-
-### Desktop:
-```
-
-```
-
-### Mobile:
-```
-
-```
-
-##  📖 [Manual de Instalação](./docs/Manual%20de%20Instalação.md)
 
 ##  📄  [Manual do Usuario](https://unipead-my.sharepoint.com/:w:/g/personal/daniel_filho61_aluno_unip_br/EeOTMdP0rnpOjn8n3VssFygBS6kaeWJOqZoovDanRrRUyw?e=94Q8bQ)
 
