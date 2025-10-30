@@ -36,7 +36,7 @@ AIssist é um aplicativo de gestão de chamados que utiliza Inteligência Artifi
 - [Documentação](https://unipead-my.sharepoint.com/:w:/g/personal/joao_vieira75_aluno_unip_br/EXikynN4GyZIkhTWs8CUuK8BK8ApoRWmykvJNajCrVFXSQ?e=dMWA0k)
 - [DoR e Dod](https://github.com/DANFAGUNDES0/PimWeb/blob/main/DoD%20e%20DoR)
 - [Manual de Usuário](https://unipead-my.sharepoint.com/:w:/g/personal/daniel_filho61_aluno_unip_br/EeOTMdP0rnpOjn8n3VssFygBS6kaeWJOqZoovDanRrRUyw?e=R61kpK)
-- [Diagramas - Arquivo Astah](./docs/CasoDeUsoPIM.asta)
+- [Diagramas - Arquivo Astah](https://github.com/MuriloCSilva/PimWebUnip/blob/main/docs/CasoDeUsoPIM.asta)
 
 
 ## 👥 Equipe
