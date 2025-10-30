@@ -31,30 +31,12 @@ AIssist é um aplicativo de gestão de chamados que utiliza Inteligência Artifi
  <a href="https://www.figma.com/"><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/></a>
 </h4>
 
-## 🏃‍ DoR - Definition of Ready
-* User Stories com Critérios de Aceitação
-* Subtarefas divididas a partir das US
-* Design no Figma
-* Modelagem do Banco de Dados
-* Diagrama de Rotas
-* Banco de Dados Vetorizado do Cliente
-## 🏆 DoD - Definition of Done
-* Manual de Usuário
-* Manual da Aplicação
-* Código completo
 
-
-
-
-## 📖 Manual de Instalação
-[Manual de instalação](https://github.com/DANFAGUNDES0/PimWeb/commit/a41070395cd126d7ceeaf561e6d83b72318f0a17)
-
-
-##  📄  [Manual do Usuario](https://unipead-my.sharepoint.com/:w:/g/personal/daniel_filho61_aluno_unip_br/EeOTMdP0rnpOjn8n3VssFygBS6kaeWJOqZoovDanRrRUyw?e=94Q8bQ)
-
-##  📁 [Documentação](https://unipead-my.sharepoint.com/:w:/g/personal/joao_vieira75_aluno_unip_br/EXikynN4GyZIkhTWs8CUuK8BK8ApoRWmykvJNajCrVFXSQ?e=dSb7XO)    
-
-##  🧾 [Diagramas UML](./docs/CasoDeUsoPIM.asta)
+## 📘 Documentação <a id="documentacao"></a>
+- [Documentação](https://unipead-my.sharepoint.com/:w:/g/personal/joao_vieira75_aluno_unip_br/EXikynN4GyZIkhTWs8CUuK8BK8ApoRWmykvJNajCrVFXSQ?e=dMWA0k)
+- [DoR e Dod](./docs/DoR%20e%20DoD.md)
+- [Manual de Usuário]("#")
+- [Diagramas - Arquivo Astah](./docs/CasoDeUsoPIM.asta)
 
 
 ## 👥 Equipe
