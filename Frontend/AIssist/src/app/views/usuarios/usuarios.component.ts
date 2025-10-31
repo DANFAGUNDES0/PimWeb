@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserService, UserResponse } from '../../../core/services/user/user.service';
 import { ButtonComponent } from '../../components/button/button.component';
@@ -6,6 +6,7 @@ import { UserEditDialogComponent } from '../../components/user-edit-dialog/user-
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule, MatDialog } from '@angular/material/dialog';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { ModalUserComponent } from './modal-user/modal-user.component';
 
 interface Usuario extends UserResponse {
   created_At?: string;
@@ -15,7 +16,7 @@ interface Usuario extends UserResponse {
 @Component({
   selector: 'app-usuarios',
   standalone: true,
-  imports: [CommonModule, ButtonComponent, MatIconModule, MatDialogModule, UserEditDialogComponent, MatTooltipModule],
+  imports: [CommonModule, ButtonComponent, MatIconModule, MatDialogModule, UserEditDialogComponent, MatTooltipModule, ModalUserComponent],
   templateUrl: './usuarios.component.html',
   styleUrls: ['./usuarios.component.scss']
 })
@@ -26,6 +27,7 @@ export class UsuariosComponent implements OnInit {
   totalPorPagina = 15;
   modalAberto = false;
   usuarioAtual: UserResponse | undefined;
+  @ViewChild(ModalUserComponent) modalUser!: ModalUserComponent;
 
   constructor(
     private userService: UserService,
@@ -47,21 +49,27 @@ export class UsuariosComponent implements OnInit {
   }
 
   deleteUser(userId: number) {
-    if (confirm('Tem certeza que deseja excluir este usuário?')) {
+    if (confirm('Tem certeza que deseja inativar este usuário?')) {
       this.userService.deleteUser(userId).subscribe({
         next: () => {
           this.usuarios = this.usuarios.filter(u => u.id !== userId);
         },
         error: err => {
-          console.error('Erro ao excluir usuário', err);
+          console.error('Erro ao inativar usuário', err);
         }
       });
     }
   }
 
+  createUser() {
+    this.modalUser.formData = null;
+    this.modalUser.open();
+  }
+
   openEditDialog(user: UserResponse) {
+    
     this.usuarioAtual = user;
-    this.modalAberto = true;
+    this.modalUser.open();
   }
 
   formatarDataLocal(data: string): string {
@@ -101,4 +109,10 @@ export class UsuariosComponent implements OnInit {
   fecharModal(): void {
     this.modalAberto = false;
   }
+
+  onFormSubmit(event: { formData: any, confirmed: boolean }) {
+    console.log('Dados recebidos do modal:', event.formData);
+    console.log('Confirmado:', event.confirmed);
+  }
+
 }

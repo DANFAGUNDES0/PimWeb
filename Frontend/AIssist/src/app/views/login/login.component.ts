@@ -24,11 +24,8 @@ export class LoginComponent {
   onLogin() {
     this.authService.login(this.loginData).subscribe({
       next: (res: any) => {
-        // Armazena o token e dados do usuário
         localStorage.setItem('token', res.accessToken);
         localStorage.setItem('user', JSON.stringify(res.user));
-
-        // Redireciona para o dashboard
         this.router.navigate(['/']);
       },
       error: () => {

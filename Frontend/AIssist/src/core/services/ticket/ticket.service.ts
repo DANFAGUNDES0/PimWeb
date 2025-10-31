@@ -24,22 +24,18 @@ export class TicketService {
 
   constructor(private http: HttpClient) {}
 
-  // GET - Buscar todos os tickets
   getTickets(): Observable<TicketResponse[]> {
     return this.http.get<TicketResponse[]>(this.apiUrl);
   }
 
-  // POST - Criar ticket
   createTicket(ticketData: any): Observable<TicketResponse> {
     return this.http.post<TicketResponse>(this.apiUrl, ticketData);
   }
 
-  // PUT - Atualizar ticket
   updateTicket(ticketData: any): Observable<any> {
     return this.http.put<any>(this.apiUrl, ticketData);
   }
 
-  // DELETE - Excluir ticket
   deleteTicket(ticketId: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${ticketId}`);
   }

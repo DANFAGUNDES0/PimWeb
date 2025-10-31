@@ -15,6 +15,7 @@
                 texto="Novo Usuário"
                 size="large"
                 type="primary"
+                (click)="createUser()"
             />
         </div>
     </div>
@@ -68,4 +69,5 @@
     [aberto]="modalAberto">
     </app-user-edit-dialog>
   </div>
+  <app-modal-user (formSubmitted)="onFormSubmit($event)"></app-modal-user>
 </div>

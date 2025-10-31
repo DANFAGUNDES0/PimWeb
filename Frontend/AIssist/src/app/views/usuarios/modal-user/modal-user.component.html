@@ -1,0 +1,24 @@
+<div class="modal-backdrop" *ngIf="showModal">
+    <div class="modal">
+        <h2>Criar Usuário</h2>
+        <form [formGroup]="form">
+            <label>Nome</label>
+            <input type="text" formControlName="name" name="name" placeholder="Digite seu nome" required />
+            <label>Email</label>
+            <input type="email" formControlName="email" name="email" placeholder="Digite seu email" required />
+            <label>Usuário</label>
+            <input type="text" formControlName="username" name="username" placeholder="Digite um nome de usuário" required />
+            <label>Senha</label>
+            <input type="password" formControlName="password" name="password" placeholder="Crie uma senha" required />
+            <label>Perfil</label>
+            <select formControlName="profile">
+                <option value="" disabled selected>Selecione um perfil</option>
+                <option *ngFor="let p of profiles" [value]="p.id">{{ p.profile }}</option>
+            </select>
+        </form>
+        <div style="justify-content: space-between; display: flex;">
+            <button class="submit-button" type="submit">Salvar</button>
+            <button class="cancel-button" (click)="close()">Cancelar</button>
+        </div>
+    </div>
+</div>
