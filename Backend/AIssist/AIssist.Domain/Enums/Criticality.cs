@@ -1,9 +1,8 @@
 ﻿using System.ComponentModel;
-using System.Reflection;
 
 namespace AIssist.Domain.Enums
 {
-    public enum Criticality
+    public enum TicketCriticality
     {
         [Description("Baixo")]
         Baixo = 1,

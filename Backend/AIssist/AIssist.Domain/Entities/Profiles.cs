@@ -1,31 +1,22 @@
-﻿using Supabase.Postgrest.Attributes;
-using Supabase.Postgrest.Models;
-
-namespace AIssist.Domain.Entities
+﻿namespace AIssist.Domain.Entities
 {
-    [Table("profiles")]
-    public class Profiles : BaseModel
+    public class Profiles
     {
-        [PrimaryKey("id", false)]
         public long Id { get; set; }
 
-        [Column("profile")]
-        public string? Profile { get; set; }
+        public DateTimeOffset CreatedAt { get; set; }
 
-        [Column("active")]
+        public string ProfileName { get; set; } = string.Empty;
+
+        public string CreatedBy { get; set; } = string.Empty;
+
+        public DateTime UpdatedAt { get; set; }
+
+        public string UpdatedBy { get; set; } = string.Empty;
+
         public bool Active { get; set; }
 
-        [Column("created_by")]
-        public string? Created_By { get; set; }
-
-        [Column("created_at")]
-        public DateTime Created_At { get; set; }
-
-        [Column("updated_at")]
-        public DateTime Updated_At { get; set; }
-
-        [Column("updated_by")]
-        public string? Updated_By { get; set; }
+        public ICollection<Users>? Users { get; set; }
     }
 }
 

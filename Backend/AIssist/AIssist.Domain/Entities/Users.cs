@@ -1,43 +1,30 @@
-﻿using Supabase.Postgrest.Attributes;
-using Supabase.Postgrest.Models;
-
-namespace AIssist.Domain.Entities
+﻿namespace AIssist.Domain.Entities
 {
-    [Table("users")]
-    public class Users : BaseModel
+    public class Users
     {
-        [PrimaryKey("id", false)]
         public long Id { get; set; }
 
-        [Column("name")]
-        public string? Name { get; set; }
+        public DateTimeOffset CreatedAt { get; set; }
 
-        [Column("username")]
-        public string? Username { get; set; }
+        public string Name { get; set; } = string.Empty;
 
-        [Column("password")]
-        public string? Password { get; set; }
+        public string Email { get; set; } = string.Empty;
 
-        [Column("email")]
-        public string? Email { get; set; }
+        public string Username { get; set; } = string.Empty;
 
-        [Column("created_at")]
-        public DateTime Created_At { get; set; }
+        public string Password { get; set; } = string.Empty;
 
-        [Column("updated_at")]
-        public DateTime Updated_At { get; set; }
+        public DateTime UpdatedAt { get; set; }
 
-        [Column("profile_id")]
-        public long Profile_Id { get; set; }
+        public long ProfileId { get; set; }
 
-        [Column("active")]
         public bool Active { get; set; }
 
-        [Column("refresh_token")]
         public string? RefreshToken { get; set; }
 
-        [Column("refresh_token_expiry_time")]
         public DateTime? RefreshTokenExpiryTime { get; set; }
+
+        public Profiles? Profile { get; set; }
     }
 }
 

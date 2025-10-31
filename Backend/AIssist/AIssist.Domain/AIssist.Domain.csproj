@@ -10,45 +10,46 @@
     <PackageReference Include="Supabase" Version="1.1.1" />
     <PackageReference Include="Supabase.Postgrest" Version="4.1.0" />
     <PackageReference Include="postgrest-csharp" Version="3.5.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.10">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.10">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Entities\" />
     <None Remove="Http\" />
     <None Remove="Http\Request\" />
     <None Remove="Http\Response\" />
-    <None Remove="Services\" />
     <None Remove="Http\Request\Criticality\" />
     <None Remove="Http\Request\Functionality\" />
     <None Remove="Http\Request\Profile\" />
     <None Remove="Http\Request\RootCause\" />
     <None Remove="Http\Request\User\" />
-    <None Remove="Services\Interfaces\" />
     <None Remove="Http\Response\Log\" />
     <None Remove="Http\Response\Login\" />
     <None Remove="Http\Request\Login\" />
     <None Remove="Http\Response\Users\" />
     <None Remove="Http\Request\Ticket\" />
-    <None Remove="Enums\" />
     <None Remove="Http\Response\Tickets\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Entities\" />
     <Folder Include="Http\" />
     <Folder Include="Http\Request\" />
     <Folder Include="Http\Response\" />
-    <Folder Include="Services\" />
     <Folder Include="Http\Request\Criticality\" />
     <Folder Include="Http\Request\Functionality\" />
     <Folder Include="Http\Request\Profile\" />
     <Folder Include="Http\Request\RootCause\" />
     <Folder Include="Http\Request\User\" />
-    <Folder Include="Services\Interfaces\" />
     <Folder Include="Http\Response\Log\" />
     <Folder Include="Http\Response\Login\" />
     <Folder Include="Http\Request\Login\" />
     <Folder Include="Http\Response\Users\" />
     <Folder Include="Http\Request\Ticket\" />
-    <Folder Include="Enums\" />
     <Folder Include="Http\Response\Tickets\" />
   </ItemGroup>
 </Project>

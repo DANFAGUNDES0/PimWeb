@@ -1,40 +1,34 @@
-﻿using Supabase.Postgrest.Attributes;
-using Supabase.Postgrest.Models;
+﻿using AIssist.Domain.Enums;
 
 namespace AIssist.Domain.Entities
 {
-    [Table("tickets")]
-    public class Tickets : BaseModel
+    public class Tickets
     {
-        [PrimaryKey("id", false)]
         public long Id { get; set; }
 
-        [Column("description")]
-        public string? Description { get; set; }
+        public string Description { get; set; } = string.Empty;
 
-        [Column("solution")]
-        public string? Solution { get; set; }
+        public string Solution { get; set; } = string.Empty;
 
-        [Column("ticket_number")]
-        public string? Ticket_Number { get; set; }
+        public string TicketNumber { get; set; } = string.Empty;
 
-        [Column("assignee_id")]
-        public long Assignee_Id { get; set; }
+        public long AssigneeId { get; set; }
 
-        [Column("reporter_id")]
-        public long Reporter_Id { get; set; }
+        public long ReporterId { get; set; }
 
-        [Column("status_id")]
-        public long Status_id { get; set; }
+        public long RootCauseId { get; set; }
 
-        [Column("root_cause_id")]
-        public long Root_Cause_id { get; set; }
+        public TicketStatus Status { get; set; }
 
-        [Column("created_at")]
-        public DateTime Created_At { get; set; }
+        public DateTimeOffset CreatedAt { get; set; }
 
-        [Column("updated_at")]
-        public DateTime Updated_At { get; set; }
+        public DateTime UpdatedAt { get; set; }
+
+        public Users? Assignee { get; set; }
+
+        public Users? Reporter { get; set; }
+
+        public RootCause? RootCause { get; set; }
     }
 }
 

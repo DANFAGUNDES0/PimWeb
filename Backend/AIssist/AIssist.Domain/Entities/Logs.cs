@@ -1,22 +1,14 @@
-﻿using Supabase.Postgrest.Attributes;
-using Supabase.Postgrest.Models;
-
-namespace AIssist.Domain.Entities
+﻿namespace AIssist.Domain.Entities
 {
-    [Table("logs")]
-    public class Logs : BaseModel
+    public class Logs
     {
-        [PrimaryKey("id", false)]
         public long Id { get; set; }
 
-        [Column("action")]
-        public string? Action { get; set; }
+        public string Action { get; set; } = string.Empty;
 
-        [Column("description")]
-        public string? Description { get; set; }
+        public string Description { get; set; } = string.Empty;
 
-        [Column("created_at")]
-        public DateTime Created_At { get; set; }
+        public DateTimeOffset CreatedAt { get; set; }
     }
 }
 

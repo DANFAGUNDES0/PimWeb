@@ -2,7 +2,7 @@
 
 namespace AIssist.Domain.Enums
 {
-    public enum Status
+    public enum TicketStatus
     {
         [Description("Aberto")]
         Aberto = 1,
