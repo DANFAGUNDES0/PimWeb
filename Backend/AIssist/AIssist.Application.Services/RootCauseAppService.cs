@@ -24,7 +24,7 @@ namespace AIssist.Application.Services
         public Task<DefaultResponse> Add(RootCausePostRequest entity)
         {
             var response = new DefaultResponse();
-            var rootCause = _mapper.Map<RootCauses>(entity);
+            var rootCause = _mapper.Map<RootCause>(entity);
             var RootCauseresult = _rootCauseService.Add(rootCause);
             RootCauseresult.Wait();
 
@@ -66,13 +66,13 @@ namespace AIssist.Application.Services
             return Task.FromResult(response);
         }
 
-        public Task<List<RootCauses>> Get()
+        public Task<List<RootCause>> Get()
         {
             var result = _rootCauseService.Get();
             return result;
         }
 
-        public Task<List<RootCauses>> GetById(long rootCauseId)
+        public Task<RootCause?> GetById(long rootCauseId)
         {
             var result = _rootCauseService.GetById(rootCauseId);
             return result;
@@ -81,7 +81,7 @@ namespace AIssist.Application.Services
         public Task<DefaultResponse> Update(RootCausePutRequest entity)
         {
             var response = new DefaultResponse();
-            var rootCause = _mapper.Map<RootCauses>(entity);
+            var rootCause = _mapper.Map<RootCause>(entity);
             var rootCauseResult = _rootCauseService.Update(rootCause);
             rootCauseResult.Wait();
 

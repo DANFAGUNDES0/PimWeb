@@ -1,9 +1,12 @@
 ﻿using AIssist.Application.Services;
 using AIssist.Application.Services.Interfaces;
+using AIssist.Domain.Interfaces;
 using AIssist.Domain.Services;
 using AIssist.Domain.Services.Interfaces;
+using AIssist.Infrastructure.Data;
 using AIssist.Infrastructure.Ioc.Configs.AutoMap;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
@@ -31,7 +34,6 @@ namespace AIssist.Infrastructure.Ioc
                 mc.AddProfile(new MappingProfile());
                 mc.AddProfile(new MappingUser());
                 mc.AddProfile(new MappingRootCause());
-                mc.AddProfile(new MappingFunctionality());
                 mc.AddProfile(new MappingLog());
                 mc.AddProfile(new MappingTicket());
             }, loggerFactory);
@@ -45,7 +47,6 @@ namespace AIssist.Infrastructure.Ioc
             services.AddScoped<IProfileAppService, ProfileAppService>();
             services.AddScoped<IUserAppService, UserAppService>();
             services.AddScoped<IRootCauseAppService, RootCauseAppService>();
-            services.AddScoped<IFunctionalityAppService, FunctionalityAppService>();
             services.AddScoped<IStatusAppService, StatusAppService>();
             services.AddScoped<ILogAppService, LogAppService>();
             services.AddScoped<ITicketAppService, TicketAppService>();
@@ -56,10 +57,15 @@ namespace AIssist.Infrastructure.Ioc
             services.AddScoped<IProfileService, ProfileService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IRootCauseService, RootCauseService>();
-            services.AddScoped<IFunctionalityService, FunctionalityService>();
-            services.AddScoped<IStatusService, StatusService>();
             services.AddScoped<ILogService, LogService>();
             services.AddScoped<ITicketService, TicketService>();
+            services.AddScoped<IAppDbContext, AppDbContext>();
+        }
+
+        public static IServiceCollection AddInfrastructure(this IServiceCollection services, string connectionString)
+        {
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString), ServiceLifetime.Scoped);
+            return services;
         }
     }
 }

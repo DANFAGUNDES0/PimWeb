@@ -1,25 +1,20 @@
 ﻿using AIssist.Application.Api.Services;
 using AIssist.Application.Api.Services.Interfaces;
+using AIssist.Infrastructure.Data;
 using AIssist.Infrastructure.Ioc;
-using Supabase;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers().AddNewtonsoftJson();
+
+builder.Services.AddInfrastructure(connectionString);
 builder.Services.AddDependencyInjection();
 builder.Services.AddScoped<IAuthService, AuthService>();
-
-var url = builder.Configuration["supabase:url"];
-var key = builder.Configuration["supabase:key"];
-var options = new SupabaseOptions
-{
-    AutoRefreshToken = true,
-    AutoConnectRealtime = true,
-};
-
-builder.Services.AddSingleton(provider => new Client(url, key, options));
 
 builder.Services.AddCors(options =>
 {

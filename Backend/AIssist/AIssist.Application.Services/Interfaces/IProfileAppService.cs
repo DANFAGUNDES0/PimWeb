@@ -7,7 +7,7 @@ namespace AIssist.Application.Services.Interfaces
 	public interface IProfileAppService
 	{
         Task<DefaultResponse> Add(ProfileRequest profileRequest);
-        Task<List<Profiles>> GetById(long profileId);
+        Task<Profiles?> GetById(long profileId);
         Task<DefaultResponse> Update(ProfileRequest profileRequest);
         Task<List<Profiles>> Get();
         Task<DefaultResponse> Inactivate(long entityId);

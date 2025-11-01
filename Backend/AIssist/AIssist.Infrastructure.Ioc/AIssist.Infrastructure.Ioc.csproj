@@ -8,11 +8,14 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="15.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.10" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AIssist.Domain\AIssist.Domain.csproj" />
     <ProjectReference Include="..\AIssist.Application.Services\AIssist.Application.Services.csproj" />
     <ProjectReference Include="..\AIssist.Shared\AIssist.Shared.csproj" />
+    <ProjectReference Include="..\AIssist.Domain.Services\AIssist.Domain.Services.csproj" />
+    <ProjectReference Include="..\AIssist.Infrastructure.Data\AIssist.Infrastructure.Data.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Configs\" />

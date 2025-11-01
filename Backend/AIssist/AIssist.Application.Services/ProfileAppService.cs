@@ -72,7 +72,7 @@ namespace AIssist.Application.Services
             return result;
         }
 
-        public Task<List<Profiles>> GetById(long profileId)
+        public Task<Profiles?> GetById(long profileId)
         {
             var result = _profileService.GetById(profileId);
             return result;

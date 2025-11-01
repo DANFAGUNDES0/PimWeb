@@ -7,9 +7,9 @@ namespace AIssist.Application.Services.Interfaces
 	public interface IRootCauseAppService
 	{
         Task<DefaultResponse> Add(RootCausePostRequest rootCauseRequest);
-        Task<List<RootCauses>> GetById(long entityId);
+        Task<RootCause?> GetById(long entityId);
         Task<DefaultResponse> Update(RootCausePutRequest rootCauseRequest);
-        Task<List<RootCauses>> Get();
+        Task<List<RootCause>> Get();
         Task<DefaultResponse> Inactivate(long entityId);
     }
 }

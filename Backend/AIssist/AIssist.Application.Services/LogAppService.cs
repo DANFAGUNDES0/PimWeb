@@ -31,7 +31,7 @@ namespace AIssist.Application.Services
             {
                 Action = action,
                 Description = descrip,
-                Created_At = DateTime.Now
+                CreatedAt = DateTime.Now
             };
             return _logService.Add(log);
         }

@@ -50,7 +50,7 @@ namespace AIssist.Application.Services
             return result;
         }
 
-        public Task<List<Tickets>> GetByTicketNumber(string ticketNumber)
+        public Task<Tickets?> GetByTicketNumber(string ticketNumber)
         {
             var result = _ticketService.GetByTicketNumber(ticketNumber);
             return result;
