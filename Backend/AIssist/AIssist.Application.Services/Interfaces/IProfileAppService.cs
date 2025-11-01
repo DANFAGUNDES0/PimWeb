@@ -8,7 +8,7 @@ namespace AIssist.Application.Services.Interfaces
 	{
         Task<DefaultResponse> Add(ProfileRequest profileRequest);
         Task<Profiles?> GetById(long profileId);
-        Task<DefaultResponse> Update(ProfileRequest profileRequest);
+        Task<DefaultResponse> Update(ProfilePutRequest profileRequest);
         Task<List<Profiles>> Get();
         Task<DefaultResponse> Inactivate(long entityId);
     }

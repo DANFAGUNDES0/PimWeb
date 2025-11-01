@@ -78,7 +78,7 @@ namespace AIssist.Application.Services
             return result;
         }
 
-        public Task<DefaultResponse> Update(ProfileRequest entity)
+        public Task<DefaultResponse> Update(ProfilePutRequest entity)
         {
             var response = new DefaultResponse();
             var profile = _mapper.Map<Profiles>(entity);

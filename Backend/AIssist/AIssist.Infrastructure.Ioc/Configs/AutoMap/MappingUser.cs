@@ -16,8 +16,8 @@ namespace AIssist.Infrastructure.Ioc.Configs.AutoMap
             .ForMember(p => p.Username, o => o.MapFrom(p => p.Username))
             .ForMember(p => p.Password, o => o.MapFrom(p => p.Password))
             .ForMember(p => p.Email, o => o.MapFrom(p => p.Email))
-            .ForMember(p => p.Profile_Id, o => o.MapFrom(p => p.ProfileId))
-            .ForMember(p => p.Updated_At, o => o.MapFrom(p => DateTime.Now))
+            .ForMember(p => p.ProfileId, o => o.MapFrom(p => p.ProfileId))
+            .ForMember(p => p.UpdatedAt, o => o.MapFrom(p => DateTime.Now))
             .ForMember(p => p.Active, o => o.MapFrom(p => true));
 
             CreateMap<UserPostRequest, Users>()
@@ -25,18 +25,18 @@ namespace AIssist.Infrastructure.Ioc.Configs.AutoMap
             .ForMember(p => p.Username, o => o.MapFrom(p => p.Username))
             .ForMember(p => p.Password, o => o.MapFrom(p => p.Password))
             .ForMember(p => p.Email, o => o.MapFrom(p => p.Email))
-            .ForMember(p => p.Profile_Id, o => o.MapFrom(p => p.ProfileId))
-            .ForMember(p => p.Updated_At, o => o.MapFrom(p => DateTime.Now))
-            .ForMember(p => p.Created_At, o => o.MapFrom(p => DateTime.Now))
+            .ForMember(p => p.ProfileId, o => o.MapFrom(p => p.ProfileId))
+            .ForMember(p => p.UpdatedAt, o => o.MapFrom(p => DateTime.Now))
+            .ForMember(p => p.CreatedAt, o => o.MapFrom(p => DateTime.Now))
             .ForMember(p => p.Active, o => o.MapFrom(p => true));
 
             CreateMap<Users, UserResponse>()
             .ForMember(p => p.Name, o => o.MapFrom(p => p.Name))
             .ForMember(p => p.Username, o => o.MapFrom(p => p.Username))
             .ForMember(p => p.Email, o => o.MapFrom(p => p.Email))
-            .ForMember(p => p.Profile, o => o.MapFrom(p => p.Profile_Id.ToString()))
-            .ForMember(p => p.Updated_At, o => o.MapFrom(p => p.Updated_At.ToString("dd/MM/yyyy HH:mm:ss")))
-            .ForMember(p => p.Created_At, o => o.MapFrom(p => p.Created_At.ToString("dd/MM/yyyy HH:mm:ss")))
+            .ForMember(p => p.Profile, o => o.MapFrom(p => p.ProfileId.ToString()))
+            .ForMember(p => p.Updated_At, o => o.MapFrom(p => p.UpdatedAt.ToString("dd/MM/yyyy HH:mm:ss")))
+            .ForMember(p => p.Created_At, o => o.MapFrom(p => p.CreatedAt.ToString("dd/MM/yyyy HH:mm:ss")))
             .ForMember(p => p.Active, o => o.MapFrom(p => p.Active));
         }
     }

@@ -13,13 +13,13 @@ using Microsoft.IdentityModel.Tokens;
 namespace AIssist.Application.Api.Services
 {
     public class AuthService : IAuthService
-	{
+    {
         private readonly IUserService _userService;
         private readonly IConfiguration _configuration;
         private readonly IProfileService _profileService;
 
         public AuthService(IConfiguration configuration, IUserService userService, IProfileService profileService)
-		{
+        {
             _userService = userService;
             _profileService = profileService;
             _configuration = configuration;
@@ -27,7 +27,7 @@ namespace AIssist.Application.Api.Services
 
         public async Task<LoginResponse?> LoginAsync(LoginRequest request)
         {
-            var user = await _userService.GetByUsername(request.Username);
+            var user = _userService.GetByUsername(request.Username).Result;
             if (user is null)
             {
                 return null;
@@ -52,7 +52,7 @@ namespace AIssist.Application.Api.Services
 
         private Users? ValidateRefreshToken(long userId, string refreshToken)
         {
-            var user = _userService.GetById(userId).Result.First();
+            var user = _userService.GetById(userId).Result;
             if (user is null || user.RefreshToken != refreshToken
                 || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
             {
@@ -74,13 +74,13 @@ namespace AIssist.Application.Api.Services
 
         private string CreateToken(Users user)
         {
-            var profile = _profileService.GetById(user.Profile_Id).Result.First();
+            var profile = _profileService.GetById(user.ProfileId).Result;
 
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, user.Username),
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Role, profile.Profile)
+                new Claim(ClaimTypes.Role, profile.ProfileName)
             };
 
             var key = new SymmetricSecurityKey(

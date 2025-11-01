@@ -62,7 +62,7 @@ namespace AIssist.Application.Api.Controllers
         }
 
         [HttpPut()]
-        public async Task<IActionResult> Update(ProfileRequest profileRequest)
+        public async Task<IActionResult> Update(ProfilePutRequest profileRequest)
         {
             try
             {

@@ -2,9 +2,8 @@
 {
     public class ProfileRequest
     {
-        public long Id { get; set; }
-        public string Profile { get; set; }
-        public List<string> Permissions { get; set; }
+        public string? Profile { get; set; }
+        public string? Username { get; set; }
     }
 }
 

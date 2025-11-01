@@ -9,9 +9,18 @@ namespace AIssist.Infrastructure.Ioc.Configs.AutoMap
         public MappingProfile()
         {
             CreateMap<ProfileRequest, Profiles>()
-            .ForMember(p => p.Id, o => o.MapFrom(p => p.Id))
-            .ForMember(p => p.Profile, o => o.MapFrom(p => p.Profile))
-            .ForMember(p => p.Updated_At, o => o.MapFrom(p => DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")));
+            .ForMember(p => p.ProfileName, o => o.MapFrom(p => p.Profile))
+            .ForMember(p => p.UpdatedAt, o => o.MapFrom(p => DateTime.Now))
+            .ForMember(p => p.CreatedAt, o => o.MapFrom(p => DateTime.Now))
+            .ForMember(p => p.Active, o => o.MapFrom(p => true))
+            .ForMember(p => p.CreatedBy, o => o.MapFrom(p => p.Username))
+            .ForMember(p => p.UpdatedBy, o => o.MapFrom(p => p.Username));
+
+            CreateMap<ProfilePutRequest, Profiles>()
+            .ForMember(p => p.ProfileName, o => o.MapFrom(p => p.ProfileName))
+            .ForMember(p => p.UpdatedAt, o => o.MapFrom(p => DateTime.Now))
+            .ForMember(p => p.Active, o => o.MapFrom(p => p.Active))
+            .ForMember(p => p.UpdatedBy, o => o.MapFrom(p => p.Username));
         }
     }
 }

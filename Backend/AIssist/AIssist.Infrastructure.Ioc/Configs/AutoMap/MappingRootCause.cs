@@ -8,20 +8,20 @@ namespace AIssist.Infrastructure.Ioc.Configs.AutoMap
     {
         public MappingRootCause()
         {
-            CreateMap<RootCausePutRequest, RootCauses>()
+            CreateMap<RootCausePutRequest, RootCause>()
             .ForMember(p => p.Id, o => o.MapFrom(p => p.Id))
-            .ForMember(p => p.Root_Cause, o => o.MapFrom(p => p.RootCause))
-            .ForMember(p => p.Created_By, o => o.MapFrom(p => p.CreatedBy))
-            .ForMember(p => p.Criticality_Id, o => o.MapFrom(p => p.CriticalityId))
-            .ForMember(p => p.Updated_At, o => o.MapFrom(p => DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")));
+            .ForMember(p => p.RootCauseName, o => o.MapFrom(p => p.RootCause))
+            .ForMember(p => p.CreatedBy, o => o.MapFrom(p => p.CreatedBy))
+            .ForMember(p => p.Criticality, o => o.MapFrom(p => p.CriticalityId))
+            .ForMember(p => p.UpdatedAt, o => o.MapFrom(p => DateTime.Now));
 
-            CreateMap<RootCausePostRequest, RootCauses>()
-            .ForMember(p => p.Root_Cause, o => o.MapFrom(p => p.RootCause))
-            .ForMember(p => p.Criticality_Id, o => o.MapFrom(p => p.CriticalityId))
-            .ForMember(p => p.Updated_By, o => o.MapFrom(p => p.CreatedBy))
-            .ForMember(p => p.Created_By, o => o.MapFrom(p => p.CreatedBy))
-            .ForMember(p => p.Updated_At, o => o.MapFrom(p => DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")))
-             .ForMember(p => p.Created_At, o => o.MapFrom(p => DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")))
+            CreateMap<RootCausePostRequest, RootCause>()
+            .ForMember(p => p.RootCauseName, o => o.MapFrom(p => p.RootCause))
+            .ForMember(p => p.Criticality, o => o.MapFrom(p => p.CriticalityId))
+            .ForMember(p => p.UpdatedBy, o => o.MapFrom(p => p.CreatedBy))
+            .ForMember(p => p.CreatedBy, o => o.MapFrom(p => p.CreatedBy))
+            .ForMember(p => p.UpdatedAt, o => o.MapFrom(p => DateTime.Now))
+             .ForMember(p => p.CreatedAt, o => o.MapFrom(p => DateTime.Now))
             .ForMember(p => p.Active, o => o.MapFrom(p => true));
         }
     }
