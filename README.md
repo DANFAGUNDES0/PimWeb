@@ -30,8 +30,23 @@ AIssist é um aplicativo de gestão de chamados que utiliza Inteligência Artifi
  * [Figma](https://www.figma.com/)
 
 
+
+
 ## 📖 Manual de Instalação <a id="manual"></a>
 [Manual de Instalação](https://github.com/MuriloCSilva/PimWebUnip/blob/main/docs/Manual%20de%20Instala%C3%A7%C3%A3o.md)
+
+
+
+## 📘 Documentação
+[Documentação](https://unipead-my.sharepoint.com/:w:/g/personal/joao_vieira75_aluno_unip_br/EXikynN4GyZIkhTWs8CUuK8BK8ApoRWmykvJNajCrVFXSQ?e=dMWA0k)
+
+
+
+## 👥 Equipe
+- Daniel fagundes – Dev Frontend  – [GitHub](https://github.com/DANFAGUNDES0) | [LinkedIn](https://www.linkedin.com/in/daniel-fagundes-916ba4246?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
+
+- Murilo Camara – Dev Frontend – [GitHub](https://github.com/MuriloCSilva) | [LinkedIn](https://www.linkedin.com/in/murilocamara?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
+
 
 
 
@@ -40,11 +55,5 @@ AIssist é um aplicativo de gestão de chamados que utiliza Inteligência Artifi
 - [DoR e Dod](https://github.com/DANFAGUNDES0/PimWeb/blob/main/DoD%20e%20DoR)
 - [Diagramas - Arquivo Astah](https://github.com/MuriloCSilva/PimWebUnip/blob/main/docs/CasoDeUsoPIM.asta)
 - [Manual de Usuário](https://unipead-my.sharepoint.com/:w:/g/personal/daniel_filho61_aluno_unip_br/EeOTMdP0rnpOjn8n3VssFygBS6kaeWJOqZoovDanRrRUyw?e=R61kpK)
-
-## 👥 Equipe
-- Daniel fagundes – Dev Frontend  – [GitHub](https://github.com/DANFAGUNDES0) | [LinkedIn](https://www.linkedin.com/in/daniel-fagundes-916ba4246?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
-
-- Murilo Camara – Dev Frontend – [GitHub](https://github.com/MuriloCSilva) | [LinkedIn](https://www.linkedin.com/in/murilocamara?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
-
 
 
